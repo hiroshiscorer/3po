@@ -1,0 +1,272 @@
+/* BOOTSTRAP XS AND SM */
+@media all and (min-width: 0px) and (max-width: 767px) {
+    nav {
+        margin-bottom: 30px;
+    }
+    nav > ul {
+        flex-direction: column;
+    }
+    nav ul li:nth-child(n+2) {
+        width: 100%;
+        margin: 5px 0;
+        text-align: center;
+    }
+    .recent-games li {
+        flex-basis: 100%;
+    }
+    .matchup-item {
+        flex-basis: 100%;
+    }
+    #teams ul.card-like > li {
+        flex-direction: column;
+        font-size: 0.8em;
+    }
+    body > main {
+        min-height: initial;
+    }
+    body > footer {
+        text-align: center;
+    }
+    footer p.dev-by {
+        align-items: center;
+        justify-content: center;
+    }
+    footer .footer-last {
+        padding-top: 30px;
+    }
+    #pay-pal > * {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #main_stats th, #main_stats td {
+        font-size: 0.7rem;
+    }
+    ul.numbered h3 {
+        font-size: 1rem;
+    }
+    ul.numbered {
+        font-size: 0.8rem;
+    }
+    ul.numbered > li > ul {
+        font-size: 0.8rem;
+    }
+
+    ul.numbered > li > ul > li > ul {
+        font-size: 0.6rem;
+    }
+    #rules table th, #rules table td {
+        font-size: 0.6rem;
+    }
+    table.season-one {
+        font-size: 0.7em;
+    }
+
+}
+
+/* BOOTSTRAP XS */
+@media all and (min-width: 0px) and (max-width: 575px) {
+    .standings-table, .standings-table tbody, .standings-table thead {
+        font-size: 0.6rem;
+    }
+    .standings-table tr > * {
+        flex-grow: 1;
+    }
+    .standings-table tr > :nth-child(6), .standings-table tr > :nth-child(7) {
+        display: none;
+    }
+    .standings-table td:first-child {
+        flex-direction: column;
+    }
+    .recent-games .team-sides-wrapper {
+        flex-direction: column;
+    }
+    .recent-games h5:last-child {
+        flex-direction: row;
+    }
+    #main_stats tr > :nth-child(6), #main_stats tr > :nth-child(7), #main_stats tr > :nth-child(9), #main_stats tr > :nth-child(10) {
+        display: none;
+    }
+    #main_stats tr > * {
+        flex-grow: 1;
+    }
+    .data-key li {
+        flex-basis: 100%;
+        order: 0;
+    }
+    .data-key li:nth-child(1) {
+        order: 1;
+    }
+    .data-key li:nth-child(4) {
+        order: 3;
+    }
+    .data-key li:nth-child(2) {
+        display: none;
+    }
+    .data-key li:nth-child(5) {
+        display: none;
+    }
+    .data-key li:nth-child(6) {
+        display: none;
+    }
+    .data-key li:nth-child(3) {
+        order: 8;
+    }
+    .data-key li:nth-child(7) {
+        order: 5;
+    }
+    .data-key li:nth-child(8) {
+        display: none;
+    }
+    .data-key li:nth-child(9) {
+        order: 10;
+    }
+}
+
+/* BOOTSTRAP SM */
+@media all and (min-width: 576px) and (max-width: 767px) {
+    .standings-table, .standings-table tbody, .standings-table thead {
+        font-size: 0.6rem;
+    }
+    .data-key li {
+        flex-basis: 50%;
+        order: 0;
+    }
+    .data-key li:nth-child(1) {
+        order: 1;
+    }
+    .data-key li:nth-child(4) {
+        order: 3;
+    }
+    .data-key li:nth-child(2) {
+        order: 2;
+    }
+    .data-key li:nth-child(5) {
+        order: 4;
+    }
+    .data-key li:nth-child(6) {
+        order: 9;
+    }
+    .data-key li:nth-child(3) {
+        order: 8;
+    }
+    .data-key li:nth-child(7) {
+        order: 5;
+    }
+    .data-key li:nth-child(8) {
+        order: 7;
+    }
+    .data-key li:nth-child(9) {
+        order: 10;
+    }
+
+}
+
+/* BOOTSTAP MD */
+@media all and (min-width: 768px) and (max-width: 991px) {
+    .standings-table, .standings-table tbody, .standings-table thead {
+        font-size: 0.6rem;
+    }
+    .recent-games li {
+        flex-basis: 100%;
+    }
+    .matchup-item {
+        flex-basis: calc((100% - 15px) / 2);
+    }
+    #teams ul.card-like > li {
+        flex-wrap: wrap;
+    }
+    #teams ul.card-like > li > ul {
+        flex-basis: 100%;
+    }
+    #main_stats th, #main_stats td {
+        font-size: 0.8rem;
+    }
+    nav ul a {
+        font-size: 18px;
+    }
+    body > footer {
+        font-size: 0.8rem;
+    }
+    ul.numbered h3 {
+        font-size: 1.25rem;
+    }
+    ul.numbered {
+        font-size: 1.25rem;
+    }
+    ul.numbered > li > ul {
+        font-size: 1rem;
+    }
+
+    ul.numbered > li > ul > li > ul {
+        font-size: 0.8rem;
+    }
+    #rules table th, #rules table td {
+        font-size: 0.8rem;
+    }
+    .data-key li {
+        flex-basis: 50%;
+        order: 0;
+    }
+    .data-key li:nth-child(1) {
+        order: 1;
+    }
+    .data-key li:nth-child(4) {
+        order: 3;
+    }
+    .data-key li:nth-child(2) {
+        order: 2;
+    }
+    .data-key li:nth-child(5) {
+        order: 4;
+    }
+    .data-key li:nth-child(6) {
+        order: 9;
+    }
+    .data-key li:nth-child(3) {
+        order: 8;
+    }
+    .data-key li:nth-child(7) {
+        order: 5;
+    }
+    .data-key li:nth-child(8) {
+        order: 7;
+    }
+    .data-key li:nth-child(9) {
+        order: 10;
+    }
+}
+
+/* BOOTSTAP LG */
+@media all and (min-width: 992px) and (max-width: 1199px) {
+    .recent-games {
+        font-size: 0.7em;
+    }
+    #main_stats th {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* ============= EXTRA QUERIES ============= */
+
+/* 0-320 */
+@media all and (min-width: 0px) and (max-width: 320px) {
+
+}
+
+/* 0-480 */
+@media all and (min-width: 0px) and (max-width: 480px) {
+
+}
+
+/* 320-480 */
+@media all and (min-width: 320px) and (max-width: 480px) {
+
+}
+
+/* 480-767 */
+@media all and (min-width: 480px) and (max-width: 767px) {
+
+}
+
+
