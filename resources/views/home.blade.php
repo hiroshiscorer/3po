@@ -5,9 +5,9 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h1 class="mtop60 mbot60 text-center"><span>Welcome to</span> Star Cross Fighter League</h1>
-                <p class="feature">SCFL brings the thrill of Competitive Dogfighting to the smaller arena. <br/>
-                A league designed to fly in a 3v3 format, which makes this a fast paced, explosive and rewarding event.</p>
+                <h1 class="mtop60 mbot60 text-center"><span>Welcome to</span> 3PO League</h1>
+                <p class="feature">3 Players Only League (3PO League) brings the much loved Cadet Cup 3v3 format into a space where everyone can enjoy! <br/>
+                    Come and join the fun with the community! Even if you have no team, sign up as a Mercenary and make friends as you play! Hope to see you in the skies soon, may the force be with you</p>
 
                 <div class="row">
                     <div class="col-12">

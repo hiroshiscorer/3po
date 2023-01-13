@@ -1,7 +1,8 @@
 :root {
-    --scfl-blue: #1347df;
-    --scfl-dark-blue: #0f2a7c;
-    --scfl-grey: #cdd9eb;
+    --scfl-blue: #a48f3e;
+    --scfl-dark-blue: hsl(47, 45%, 19%);
+    --scfl-grey: #ebebd9;
+    --3po: #a48f3e;
 }
 
 div a:focus {
@@ -23,6 +24,11 @@ h1, h2, h3, h4, h5, h6 {
 ul {
 	padding: 0;
     list-style-type: none;
+}
+
+ul.bulleted {
+    list-style-type: disc;
+    padding-left: 1em;
 }
 
 img {
@@ -214,7 +220,7 @@ nav ul a:hover {
 }
 
 nav ul a:hover::before {
-    top: -50px;
+    top: -60px;
     opacity: 1;
 }
 nav ul li:nth-child(n+2) a {
@@ -243,6 +249,14 @@ body > footer ul li {
     flex-basis: 50%;
 }
 
+body > footer a {
+    color: #4b0;
+}
+
+body > footer a:hover {
+    color: #8a0;
+}
+
 footer p.dev-by {
     display: flex;
     align-items: flex-end;
@@ -263,7 +277,8 @@ footer .footer-last {
 /* =========================== COMMON  =========================== */
 
 body > main {
-    background: var(--scfl-dark-blue) url('../images/stars-cross.png') 50% / contain fixed no-repeat;
+    background: var(--scfl-dark-blue) url('../images/stars-cross.png') 50% / cover fixed no-repeat;
+    background-blend-mode: luminosity;
     color: #fff;
     box-shadow: 0 0 10px #000;
     padding-bottom: 60px;
@@ -908,16 +923,27 @@ ul.numbered a:hover {
     border: 1px solid #fff8;
     font-size: 1rem;
 }
+
 #rules table th {
     background-color: var(--scfl-grey);
     color: var(--scfl-dark-blue);
+    width: calc(100% / 6);
 }
-#rules table th:first-child {
-    width: 25%;
-}
+
 #rules .end-of-rules {
     border-top: 1px solid #fff8;
     text-align: center;
+}
+
+.justify-last-center {
+    text-align: justify;
+    text-align-last: center;
+}
+
+#rules h3 {
+    font-size: 35px;
+    margin-top: 60px;
+    text-align-last: center;
 }
 
 /* =========================== ARCHIVE =========================== */

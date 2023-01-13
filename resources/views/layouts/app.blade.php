@@ -15,13 +15,16 @@
 
 
     <!-- Favicon -->
+
+
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0f2a7c">
-    <meta name="msapplication-TileColor" content="#0f2a7c">
-    <meta name="theme-color" content="#0f2a7c">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#a48f3e">
+    <meta name="msapplication-TileColor" content="#a48f3e">
+    <meta name="theme-color" content="#ffffff">
+
 
     <!-- Styles -->
     <link href="/css/bootstrap.css" rel="stylesheet">
@@ -42,7 +45,7 @@
             <div class="col">
                 <nav>
                     <ul>
-                        <li><a href="/"><img src="/images/logo.png" alt="SCFL logo"></a></li>
+                        <li><a href="/"><img src="/images/logo.png" alt="3PO logo"></a></li>
                         <li><a href="/schedule">Schedule</a></li>
                         <li><a href="/teams">Teams</a></li>
                         <li><a href="/pilots">Pilots</a></li>
@@ -60,7 +63,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <img src="/images/logo-footer.png" alt="SCFL logo">
+                <img src="/images/logo-footer.png" alt="3PO title">
             </div>
             <div class="col-md-6">
                 <ul>
@@ -70,7 +73,8 @@
                     <li><a href="/pilots">Pilots</a></li>
                     <li><a href="/rules">Rules</a></li>
                     <li><a href="/seasons">Seasons</a></li>
-                    <li><a href="https://discord.com/invite/BgYknw7bUu" target="_blank">SCFL Discord Server</a></li>
+                    <li><a href="https://discord.com/invite/n6VQyRuqU3"
+                           target="_blank">3PO Discord Server</a></li>
                 </ul>
 
             </div>
