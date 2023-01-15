@@ -51,7 +51,8 @@
                                                     <th class="standings-click" data-class="score"><i class="fa fa-sort-desc"></i> Score</th>
                                                     <th class="standings-click" data-class="kills"><i class="fa fa-sort-desc"></i> K</th>
                                                     <th class="standings-click" data-class="deaths"><i class="fa fa-sort-desc"></i> D</th>
-                                                    <th class="standings-click" data-class="assists"><i class="fa fa-sort-desc"></i> A</th>
+                                                    <th class="standings-click" data-class="ai"><i class="fa fa-sort-desc"></i> AI</th>
+                                                    <th class="standings-click" data-class="cap"><i class="fa fa-sort-desc"></i> CAP</th>
                                                     <th class="standings-click" data-class="kd"><i class="fa fa-sort-desc"></i> KD</th>
                                                     <th class="standings-click" data-class="kda"><i class="fa fa-sort-desc"></i> KDA</th>
                                                     <th class="standings-click" data-class="points"><i class="fa fa-sort-desc active"></i> <strong>Points</strong></th>
@@ -75,7 +76,9 @@
                                                         $added_score = 0;
                                                         $added_kills = 0;
                                                         $added_deaths = 0;
-                                                        $added_assists = 0;
+														$added_assists = 0;
+                                                        $added_ai = 0;
+                                                        $added_cap = 0;
 
                                                         foreach ($pilots as $pilot) {
                                                             // SELECT SUM(score) as puntos FROM pilot_stats WHERE pilot_id = 7
@@ -83,10 +86,14 @@
                                                             $tempKills = Illuminate\Support\Facades\DB::table('pilot_stats')->selectRaw('SUM(kills) as qills')->where('pilot_id', $pilot->id)->get();
                                                             $tempDeaths = Illuminate\Support\Facades\DB::table('pilot_stats')->selectRaw('SUM(deaths) as muertes')->where('pilot_id', $pilot->id)->get();
                                                             $tempAssists = Illuminate\Support\Facades\DB::table('pilot_stats')->selectRaw('SUM(assists) as asistencias')->where('pilot_id', $pilot->id)->get();
+                                                            $tempAi = Illuminate\Support\Facades\DB::table('pilot_stats')->selectRaw('SUM(ai_kills) as aiqills')->where('pilot_id', $pilot->id)->get();
+                                                            $tempCap = Illuminate\Support\Facades\DB::table('pilot_stats')->selectRaw('SUM(cap_damage) as capdam')->where('pilot_id', $pilot->id)->get();
                                                             $added_score += $tempScore[0]->puntos;
                                                             $added_kills += $tempKills[0]->qills;
                                                             $added_deaths += $tempDeaths[0]->muertes;
                                                             $added_assists += $tempAssists[0]->asistencias;
+                                                            $added_ai += $tempAi[0]->aiqills;
+                                                            $added_cap += $tempCap[0]->capdam;
 
                                                         }
                                                         $temp_games_played_one = Illuminate\Support\Facades\DB::table('matchups')
@@ -120,8 +127,11 @@
                                                         <td class="data-deaths" data-id="{{ $team->id }}" data-value="{{ $added_deaths }}">
                                                             {{ $added_deaths }}
                                                         </td>
-                                                        <td class="data-assists" data-id="{{ $team->id }}" data-value="{{ $added_assists }}">
-                                                            {{ $added_assists }}
+                                                        <td class="data-ai" data-id="{{ $team->id }}" data-value="{{ $added_ai }}">
+                                                            {{ number_format($added_ai) }}
+                                                        </td>
+                                                        <td class="data-cap" data-id="{{ $team->id }}" data-value="{{ $added_cap }}">
+                                                            {{ number_format($added_cap) }}
                                                         </td>
                                                         <td class="data-kd" data-id="{{ $team->id }}" data-value="{{ number_format($added_kills / ($added_deaths == 0 ? 1 : intval($added_deaths)), 2) }}">
                                                             {{ number_format($added_kills / ($added_deaths == 0 ? 1 : intval($added_deaths)), 2) }}
@@ -161,14 +171,23 @@
 														$stats2 = Illuminate\Support\Facades\DB::table('pilot_stats')->join('pilots', 'pilots.id', '=', 'pilot_stats.pilot_id')->select('pilot_stats.*', 'pilots.pilot_name', 'pilots.team_id')->where('match_id', $singleGame->id)->where('team_id', $this_matchup->team2_id)->get();
 														$scoreboard_one = 0;
 														$scoreboard_two = 0;
+
 														foreach ($stats1 as $stat) {
-															$scoreboard_one += $stat->deaths;
+															$scoreboard_one = $stat->match_won;
 														}
 														foreach ($stats2 as $stat) {
-															$scoreboard_two += $stat->deaths;
+															$scoreboard_two = $stat->match_won;
 														}
-														$win_state1 = $scoreboard_one < $scoreboard_two ? 'winner' : 'loser';
-														$win_state2 = $scoreboard_one > $scoreboard_two ? 'winner' : 'loser';
+
+														/*
+														if ($stats1[0]->match_won) {
+															$scoreboard_one = 1;
+														} else {
+															$scoreboard_two = 1;
+														}
+														*/
+														$win_state1 = $scoreboard_one > $scoreboard_two ? 'winner' : 'loser';
+														$win_state2 = $scoreboard_one < $scoreboard_two ? 'winner' : 'loser';
 
 														if ($scoreboard_one == $scoreboard_two) {
 															$win_state1 = 'draw';
@@ -184,7 +203,7 @@
                                                         <div class="team-sides-wrapper">
                                                             <div class="team_one_side">
                                                                 <div class="scoreboard-wrapper">
-                                                                    <h5><img src="/images/'.$faction1.'-logo.png" alt="'.$faction1.' logo" /> '.$team_one->team_name.' <span class="'.$win_state1.'">'.$scoreboard_two.'</span></h5>
+                                                                    <h5><img src="/images/'.$faction1.'-logo.png" alt="'.$faction1.' logo" /> '.$team_one->team_name.' <span class="'.$win_state1.'">'.$scoreboard_one.'</span></h5>
                                                                 </div>
                                                         ';
 														echo '
@@ -223,7 +242,7 @@
                                                             <div class="team_two_side">
 
                                                                 <div class="scoreboard-wrapper">
-                                                                    <h5><img src="/images/'.$faction2.'-logo.png" alt="'.$faction2.' logo" /> '.$team_two->team_name.' <span class="'.$win_state2.'">'.$scoreboard_one.'</span></h5>
+                                                                    <h5><img src="/images/'.$faction2.'-logo.png" alt="'.$faction2.' logo" /> '.$team_two->team_name.' <span class="'.$win_state2.'">'.$scoreboard_two.'</span></h5>
                                                                 </div>
                                                                 <div class="single-match-wrapper">
                                                                     <table class="single-match-stats">

@@ -14,6 +14,8 @@ $(document).ready(function(){
                 case 'kills':
                 case 'deaths':
                 case 'assists':
+                case 'ai':
+                case 'cap':
                 case 'won':
                 case 'lost':
                     $(type).each(function (){
@@ -62,6 +64,8 @@ $(document).ready(function(){
                 case 'kills':
                 case 'deaths':
                 case 'assists':
+                case 'ai':
+                case 'cap':
                     $(type).each(function (){
                         let name = $(this).attr('data-id');
                         let value = parseInt($(this).attr('data-value'));

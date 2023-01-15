@@ -21,6 +21,8 @@ class CreatePilotStatsTable extends Migration
             $table->integer('kills')->unsigned();
             $table->integer('deaths')->unsigned();
             $table->integer('assists')->unsigned();
+            $table->integer('ai_kills')->unsigned();
+            $table->integer('cap_damage')->unsigned();
             $table->integer('match_id')->unsigned();
             $table->foreign('match_id')->references('id')->on('matches');
             $table->integer('match_won')->unsigned();

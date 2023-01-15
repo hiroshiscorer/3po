@@ -29,8 +29,8 @@
     <!-- Styles -->
     <link href="/css/bootstrap.css" rel="stylesheet">
     <link href="/css/font-awesome.css" rel="stylesheet">
-    <link href="/css/main.css?v=1.2.0" rel="stylesheet">
-    <link href="/css/responsive.css?v=1.2.0" rel="stylesheet">
+    <link href="/css/main.css?v=1.2.1" rel="stylesheet">
+    <link href="/css/responsive.css?v=1.2.1" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

@@ -15,6 +15,8 @@ class pilotStat extends Model
         'kills',
         'deaths',
         'assists',
+        'ai_kills',
+        'cap_damage',
         'match_id',
         'match_won',
         'match_tied',

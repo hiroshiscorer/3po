@@ -17,6 +17,8 @@
                             <th class="stat-click" data-class="kills"><i class="fa fa-sort-desc"></i> K</th>
                             <th class="stat-click" data-class="deaths"><i class="fa fa-sort-desc"></i> D</th>
                             <th class="stat-click" data-class="assists"><i class="fa fa-sort-desc"></i> A</th>
+                            <th class="stat-click" data-class="ai"><i class="fa fa-sort-desc"></i> AI</th>
+                            <th class="stat-click" data-class="cap"><i class="fa fa-sort-desc"></i> CAP</th>
                             <th class="stat-click" data-class="won"><i class="fa fa-sort-desc"></i> W</th>
 {{--                            <th class="click-tied">D</th>--}}
                             <th class="stat-click" data-class="lost"><i class="fa fa-sort-desc"></i> L</th>
@@ -35,6 +37,8 @@
                             $kills_total = \Illuminate\Support\Facades\DB::table('pilot_stats')->select(Illuminate\Support\Facades\DB::raw('SUM(kills) kills_total'))->where('pilot_id', '=', $pilots[$i]->id)->get();
                             $deaths_total = \Illuminate\Support\Facades\DB::table('pilot_stats')->select(Illuminate\Support\Facades\DB::raw('SUM(deaths) deaths_total'))->where('pilot_id', '=', $pilots[$i]->id)->get();
                             $assists_total = \Illuminate\Support\Facades\DB::table('pilot_stats')->select(Illuminate\Support\Facades\DB::raw('SUM(assists) assists_total'))->where('pilot_id', '=', $pilots[$i]->id)->get();
+                            $ai_total = \Illuminate\Support\Facades\DB::table('pilot_stats')->select(Illuminate\Support\Facades\DB::raw('SUM(ai_kills) ai_total'))->where('pilot_id', '=', $pilots[$i]->id)->get();
+                            $cap_total = \Illuminate\Support\Facades\DB::table('pilot_stats')->select(Illuminate\Support\Facades\DB::raw('SUM(cap_damage) cap_total'))->where('pilot_id', '=', $pilots[$i]->id)->get();
                             $won_total = \Illuminate\Support\Facades\DB::table('pilot_stats')->select(Illuminate\Support\Facades\DB::raw('SUM(match_won) won_total'))->where('pilot_id', '=', $pilots[$i]->id)->get();
                             $tied_total = \Illuminate\Support\Facades\DB::table('pilot_stats')->select(Illuminate\Support\Facades\DB::raw('SUM(match_tied) tied_total'))->where('pilot_id', '=', $pilots[$i]->id)->get();
                             $lost_total = \Illuminate\Support\Facades\DB::table('pilot_stats')->select(Illuminate\Support\Facades\DB::raw('SUM(match_lost) lost_total'))->where('pilot_id', '=', $pilots[$i]->id)->get();
@@ -60,6 +64,14 @@
                                 <td class="data-assists" data-id="{{ $i }}" data-value="{{ $assists_total[0]->assists_total == NULL ? 0 : $assists_total[0]->assists_total}}">
                                     {{ $assists_total[0]->assists_total == NULL ? 0 : $assists_total[0]->assists_total }}
                                     <span>{{ number_format($assists_total[0]->assists_total / ($games_total[0]->games_total == 0 ? 1 : intval($games_total[0]->games_total)), 2) }}</span>
+                                </td>
+                                <td class="data-ai" data-id="{{ $i }}" data-value="{{ $ai_total[0]->ai_total == NULL ? 0 : $ai_total[0]->ai_total}}">
+                                    {{ number_format($ai_total[0]->ai_total == NULL ? 0 : $ai_total[0]->ai_total) }}
+                                    <span>{{ number_format($ai_total[0]->ai_total / ($games_total[0]->games_total == 0 ? 1 : intval($games_total[0]->games_total)), 2) }}</span>
+                                </td>
+                                <td class="data-cap" data-id="{{ $i }}" data-value="{{ $cap_total[0]->cap_total == NULL ? 0 : $cap_total[0]->cap_total}}">
+                                    {{ number_format($cap_total[0]->cap_total == NULL ? 0 : $cap_total[0]->cap_total) }}
+                                    <span>{{ number_format($cap_total[0]->cap_total / ($games_total[0]->games_total == 0 ? 1 : intval($games_total[0]->games_total)), 2) }}</span>
                                 </td>
                                 <td class="data-won" data-id="{{ $i }}" data-value="{{ $won_total[0]->won_total == NULL ? 0 : $won_total[0]->won_total }}">
                                     {{ $won_total[0]->won_total == NULL ? 0 : $won_total[0]->won_total }}
@@ -95,6 +107,8 @@
                         <li>KDA = Kill/Death Ratio using Assists as half kills</li>
                         <li>A = Assists</li>
                         <li>WL = Games Won/Lost Ratio</li>
+                        <li>CAP = Capital Ship Damage</li>
+                        <li>AI - AI Kills</li>
                         <li>The smaller number in parentheses is the stat average per game.</li>
                     </ul>
                         @else
