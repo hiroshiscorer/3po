@@ -55,9 +55,9 @@
         main {
             background-image: url('/images/pilot-card-bg.png');
             background-size: cover;
-            border: calc(99vh * 0.02) solid #1347df;
+            border: calc(99vh * 0.02) solid rgb(164, 143, 62);
             border-radius: calc(99vh * 0.1);
-            box-shadow: 0 0 0 calc(99vh * 0.00925925925925925925925925925926) #cdd9eb inset;
+            box-shadow: 0 0 0 calc(99vh * 0.00925925925925925925925925925926) #d1c79e inset;
             color: #cdd9eb;
             display: flex;
             flex-direction: column;
@@ -116,6 +116,7 @@
             background-color: transparent;
             color: inherit;
             font-size: calc(99vh * 0.03);
+            text-align: left;
             width: 33%;
         }
         table td {
@@ -123,18 +124,26 @@
             color: #000723;
             font-size: calc(99vh * 0.036);
             width: 25%;
-            padding: calc(99vh * 0.009) calc(99vh * 0.022);
+            padding: 0 calc(99vh * 0.022);
+            text-align: right;
         }
         table th {
             font-size: calc(99vh * 0.02962);
             font-weight: normal;
             padding: calc(99vh * 0.007) calc(99vh * 0.02);
+            text-align: right;
+        }
+        table td span.medium-stat {
+            font-size: calc(99vh * 0.025);
+        }
+        table td span.smaller-stat {
+            font-size: calc(99vh * 0.02);
         }
     </style>
 </head>
 <body>
 <script>
-    let query = "INSERT INTO `cards` (`id`,`season`,`pilotname`,`team`,`team_image`,`nr_k`,`nr_d`,`nr_a`,`nr_w`,`nr_kd`,`ge_k`,`ge_d`,`ge_a`,`ge_w`,`ge_kd`,`t_kd`,`created_at`,`updated_at`) VALUES (NULL,'proto-0','{{ $pilot->pilot_name }}','{{ $team->team_name }}','{{ $team->logo != '' ? $team->logo : 'default.png' }}','{{ $nrStat['kills'] }}','{{ $nrStat['deaths'] }}','{{ $nrStat['assists'] }}','{{ $nrStat['wins'] }}','{{ number_format($nrStat['kills'] / ($nrStat['deaths'] != 0 ? $nrStat['deaths'] : 1), 2) }}','{{ $eStat['kills'] }}','{{ $eStat['deaths'] }}','{{ $eStat['assists'] }}','{{ $eStat['wins'] }}','{{ number_format($eStat['kills'] / ($eStat['deaths'] != 0 ? $eStat['deaths'] : 1), 2) }}','{{ number_format(($nrStat['kills'] + $eStat['kills']) / (($nrStat['deaths'] + $eStat['deaths']) != 0 ? ($nrStat['deaths'] + $eStat['deaths']) : 1), 2) }}',NULL,NULL); ";
+    let query = "INSERT INTO `cards` (`id`,`season`,`pilotname`,`team`,`team_image`,`nr_k`,`nr_d`,`nr_a`,`nr_w`,`nr_kd`,`nr_ai`,`nr_cap`,`ge_k`,`ge_d`,`ge_a`,`ge_w`,`ge_kd`,`ge_ai`,`ge_cap`,`t_kd`,`created_at`,`updated_at`) VALUES (NULL,'proto-0','{{ $pilot->pilot_name }}','{{ $team->team_name }}','{{ $team->logo != '' ? $team->logo : 'default.png' }}','{{ $nrStat['kills'] }}','{{ $nrStat['deaths'] }}','{{ $nrStat['assists'] }}','{{ $nrStat['wins'] }}','{{ number_format($nrStat['kills'] / ($nrStat['deaths'] != 0 ? $nrStat['deaths'] : 1), 2) }}','{{ $nrStat['ai'] }}','{{ $nrStat['cap'] }}','{{ $eStat['kills'] }}','{{ $eStat['deaths'] }}','{{ $eStat['assists'] }}','{{ $eStat['wins'] }}','{{ number_format($eStat['kills'] / ($eStat['deaths'] != 0 ? $eStat['deaths'] : 1), 2) }}','{{ $eStat['ai'] }}','{{ $eStat['cap'] }}','{{ number_format(($nrStat['kills'] + $eStat['kills']) / (($nrStat['deaths'] + $eStat['deaths']) != 0 ? ($nrStat['deaths'] + $eStat['deaths']) : 1), 2) }}',NULL,NULL); ";
 
     console.log(query);
 </script>
@@ -178,10 +187,16 @@
             <td>{{ $eStat['wins'] + $nrStat['wins'] }}</td>
         </tr>
         <tr>
-            <td>K/D</td>
-            <td>{{ number_format($nrStat['kills'] / ($nrStat['deaths'] != 0 ? $nrStat['deaths'] : 1), 2) }}</td>
-            <td>{{ number_format($eStat['kills'] / ($eStat['deaths'] != 0 ? $eStat['deaths'] : 1), 2) }}</td>
-            <td>{{ number_format(($nrStat['kills'] + $eStat['kills']) / (($nrStat['deaths'] + $eStat['deaths']) != 0 ? ($nrStat['deaths'] + $eStat['deaths']) : 1), 2) }}</td>
+            <td>AI</td>
+            <td><span class="medium-stat">{{ number_format($nrStat['ai']) }}</span></td>
+            <td><span class="medium-stat">{{ number_format($eStat['ai']) }}</span></td>
+            <td><span class="medium-stat">{{ number_format($eStat['ai'] + $nrStat['ai']) }}</span></td>
+        </tr>
+        <tr>
+            <td>CAP</td>
+            <td><span class="smaller-stat">{{ number_format($nrStat['cap']) }}</span></td>
+            <td><span class="smaller-stat">{{ number_format($eStat['cap']) }}</span></td>
+            <td><span class="smaller-stat">{{ number_format($eStat['cap'] + $nrStat['cap']) }}</span></td>
         </tr>
     </table>
     <figure>

@@ -19,11 +19,15 @@ class card extends Model
         'nr_a',
         'nr_w',
         'nr_kd',
+        'nr_ai',
+        'nr_cap',
         'ge_k',
         'ge_d',
         'ge_a',
         'ge_w',
         'ge_kd',
+        'ge_ai',
+        'ge_cap',
         't_kd',
     ];
 }

@@ -109,8 +109,8 @@ class HomeController extends Controller
         $pilot = pilot::where('pilot_name', $pilotname)->first();
         $team = team::where('id', $pilot->team_id)->first();
         $stats = pilotStat::where('pilot_id', $pilot->id)->get();
-        $nrStat = ['kills' => 0, 'deaths' => 0, 'assists' => 0, 'wins' => 0];
-        $eStat = ['kills' => 0, 'deaths' => 0, 'assists' => 0, 'wins' => 0];
+        $nrStat = ['kills' => 0, 'deaths' => 0, 'assists' => 0, 'wins' => 0, 'cap' => 0, 'ai' => 0];
+        $eStat = ['kills' => 0, 'deaths' => 0, 'assists' => 0, 'wins' => 0, 'cap' => 0, 'ai' => 0];
 
         for ($i = 0; $i < count($stats); $i++) {
             $match = \App\Models\match::where('id', $stats[$i]->match_id)->first();
@@ -123,12 +123,16 @@ class HomeController extends Controller
                     $nrStat["deaths"]+=$stats[$i]->deaths;
                     $nrStat["assists"]+=$stats[$i]->assists;
                     $nrStat["wins"]+=$stats[$i]->match_won;
+                    $nrStat["ai"]+=$stats[$i]->ai_kills;
+                    $nrStat["cap"]+=$stats[$i]->cap_damage;
                 } else {
                     //add to emp stats
                     $eStat["kills"]+=$stats[$i]->kills;
                     $eStat["deaths"]+=$stats[$i]->deaths;
                     $eStat["assists"]+=$stats[$i]->assists;
                     $eStat["wins"]+=$stats[$i]->match_won;
+                    $eStat["ai"]+=$stats[$i]->ai_kills;
+                    $eStat["cap"]+=$stats[$i]->cap_damage;
                 }
             }
             if ($pilot->team_id == $matchup->team2_id) {
@@ -138,12 +142,16 @@ class HomeController extends Controller
                     $nrStat["deaths"]+=$stats[$i]->deaths;
                     $nrStat["assists"]+=$stats[$i]->assists;
                     $nrStat["wins"]+=$stats[$i]->match_won;
+                    $nrStat["ai"]+=$stats[$i]->ai_kills;
+                    $nrStat["cap"]+=$stats[$i]->cap_damage;
                 } else {
                     //add to emp stats
                     $eStat["kills"]+=$stats[$i]->kills;
                     $eStat["deaths"]+=$stats[$i]->deaths;
                     $eStat["assists"]+=$stats[$i]->assists;
                     $eStat["wins"]+=$stats[$i]->match_won;
+                    $eStat["ai"]+=$stats[$i]->ai_kills;
+                    $eStat["cap"]+=$stats[$i]->cap_damage;
                 }
             }
 
