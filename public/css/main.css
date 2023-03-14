@@ -668,6 +668,12 @@ strong.champ {
     width: 100%;
 }
 
+#main_stats thead {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
 #main_stats tr {
     display: flex;
 }

@@ -134,6 +134,12 @@ $(document).ready(function(){
         if (anchor != null) {
             let id = '#'+anchor;
             if ($(id).length) $(id).addClass('blink-me');
+
+            // Get the current scroll position
+            let currentPosition = document.documentElement.scrollTop;
+            let headerHeight = document.getElementsByClassName('stat-click')[1].offsetHeight;
+
+            document.documentElement.scrollTop = currentPosition - headerHeight - 10;
         }
     }
 

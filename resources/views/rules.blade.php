@@ -161,7 +161,11 @@
                 <p>Team Capains can sign up with a team of between 3-6 pilots.</p>
                 <p>You can also sign up as a Mercenary Solo, Duo or Trio and be put with other teams when needed and hopefully make some new friends!</p>
                 <p>New teams that sign up will play in the next play ins to start the next season.</p>
+                <p>If a team has a roster of 6 locked pilots during a season it may substitute one of those pilots out for somebody else. If a team decides to do so they will incur a 3 point penalty. You may substitute as many as you like but will suffer the 3 point penalty each time.</p>
 
+                <p>If you have played a 7th player during a season you will suffer a 3 point penalty and must remove someone from the locked roster.</p>
+
+                <p>This rule has been put in place so that in the event a team has ran 6 locked players and a few of them have decided to not play anymore, the team can play an additional player (or multiple for multiple point penalties) and update their roster without having to forfeit every single match from that point until the end of the season.</p>
             </div>
         </div>
     </div>
