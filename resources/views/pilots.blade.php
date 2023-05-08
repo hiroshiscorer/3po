@@ -8,7 +8,15 @@
                     <h2 class="title">Current Season Pilots</h2>
                     @if($season != '')
                         @if ($season->show === 1)
-
+                            @if(count($divisions) > 1)
+                    <h3 class="division-filter-title">Filter by: </h3>
+                    <ul class="division-filter">
+                        <li class="selected" data-division="0">All Divisions</li>
+                        @foreach($divisions as $div)
+                        <li data-division="division-{{ $div->id }}">{{ $div->division_name }} Division</li>
+                        @endforeach
+                    </ul>
+                            @endif
                     <table id="main_stats">
                         <thead>
                         <tr>
@@ -30,7 +38,7 @@
                         <tbody>
 
                         @for($i = 0; $i < count($pilots); $i++)
-                            <tr class="tr-sort" data-id="{{ $i }}" id="{{ $pilots[$i]->pilot_name }}">
+                            <tr class="tr-sort division-{{ \App\Models\team::where('id', $pilots[$i]->team_id)->first()->division_id }}" data-id="{{ $i }}" id="{{ $pilots[$i]->pilot_name }}">
                             @php
                             $games_total = \Illuminate\Support\Facades\DB::table('pilot_stats')->select(Illuminate\Support\Facades\DB::raw('COUNT(score) games_total'))->where('pilot_id', '=', $pilots[$i]->id)->get('games_total');
                             $score_total = \Illuminate\Support\Facades\DB::table('pilot_stats')->select(Illuminate\Support\Facades\DB::raw('SUM(score) score_total'))->where('pilot_id', '=', $pilots[$i]->id)->get();

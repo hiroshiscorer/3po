@@ -3,6 +3,7 @@
     --scfl-dark-blue: hsl(47, 45%, 19%);
     --scfl-grey: #ebebd9;
     --3po: #a48f3e;
+    --3po-trans: #a48f3e88;
 }
 
 div a:focus {
@@ -793,6 +794,45 @@ strong.champ {
 .data-key li:last-child {
     flex-basis: 100%;
     opacity: 0.7;
+}
+
+.division-filter-title {
+    font-size: 1rem;
+    font-variant: all-small-caps;
+}
+
+.division-filter {
+    display: flex;
+    gap: 15px;
+}
+
+.division-filter li {
+    background-color: var(--3po-trans);
+    padding: 5px 15px;
+    border: 3px ridge #fff8;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 150ms ease;
+}
+
+.division-filter li:hover {
+    box-shadow: 0 0 5px #fff8;
+}
+
+.division-filter li.selected {
+    background-color: #1e3c7a88;
+}
+
+.division-filter li.selected::after {
+    content: "\f00c";
+    display: inline-block;
+    line-height: 1;
+    font-weight: normal;
+    font-variant: normal;
+    font-style: normal;
+    font-size: 1em;
+    font-family: FontAwesome;
+    margin-left: 15px;
 }
 /* =========================== SCHEDULE =========================== */
 

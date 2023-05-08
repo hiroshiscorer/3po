@@ -63,6 +63,7 @@ class HomeController extends Controller
 
     public function pilots()
     {
+        $divisions = division::all();
         $season = season::orderByDesc('created_at')->first();
         $pilots = DB::table('pilots')
             ->join('teams', 'pilots.team_id', '=', 'teams.id')
@@ -73,7 +74,7 @@ class HomeController extends Controller
             ->get();
 
 
-        return view('pilots', compact('season', 'pilots') );
+        return view('pilots', compact('season', 'pilots', 'divisions') );
     }
 
     public function schedule()

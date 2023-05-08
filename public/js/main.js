@@ -143,6 +143,21 @@ $(document).ready(function(){
         }
     }
 
+    if ($('.division-filter').length) {
+        $('.division-filter li').on('click', function (){
+            let div = $(this).data('division');
+            if (div === 0) {
+                $('.tr-sort').css('display', 'flex');
+            } else {
+                $('.tr-sort').css('display', 'none');
+                $('.'+div).css('display', 'flex');
+            }
+            $('.division-filter li').removeClass('selected');
+            $(this).addClass('selected');
+            console.log(div);
+        });
+    }
+
 });
 
 function compareSecondColumnA(a, b) {
