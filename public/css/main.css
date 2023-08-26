@@ -961,6 +961,14 @@ ul.numbered a:hover {
     text-shadow: 0 0 1px #fff;
 }
 
+a.generic-link {
+    color: #cc0;
+}
+
+a.generic-link:hover {
+    color: #ee0;
+}
+
 #rules table {
     width: 100%;
 }

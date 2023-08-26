@@ -6,12 +6,12 @@
         <div class="row">
             <div class="col">
                 <h2 class="title">3 Players Only League Rule Book</h2>
-                <p class="justify-last-center">3 Players Only League is a 3v3 Fleet Battles league for all, the league is split into divisions so that all the games will be as close and intense as possible. The league format will allow those who don't have the time or are in an awkward timezone to compete in the Cadet Cup, an oportunity to play in this format and hopefully have a great time. League matches are played at a time both teams agree on, this means you can potentually play at anytime and won't have to play 10 games in a row.</p>
+                <p class="justify-last-center">3 Players Only League is a 3v3 Fleet Battles league for all, the league is split into divisions so that all the games will be as close and intense as possible. League matches are played at a time both teams agree on.</p>
 
                 <h3>League Format</h3>
                 <p>The League will be split into multiple divisions to keep the games as close as possible.</p>
-                <p>The Divisions are currently Rancor, Nexu, Bantha, Mynock, Porg. At the end of a season the top 2 teams in a division will move up to a higher division (except in Rancor) and the bottom 2 teams will move down a division (except in Porg).</p>
-                <p>A season will last for 8 weeks + 2 play in weeks for new teams, with every team playing every other team in a division once.</p>
+                <p>The nominal Divisions are Rancor, Nexu, Bantha, Mynock, Porg. If there are not enough teams to fill a minimum of 4 teams per division, then less divisions will be open. At the end of a season the top 2 teams in a division will move up to a higher division (except in Rancor) and the bottom 2 teams will move down a division (except in Porg).</p>
+                <p>A season will last 1 week per matchup, plus 2 additional weeks for late matches. Every team will play against every other team in the same division once.</p>
                 <p>Every map will be played across a season:</p>
                 <ul>
                     <li>Round 1 - <strong>Sissubo</strong></li>
@@ -41,8 +41,11 @@
 
                 <h3>Play In Weeks</h3>
                 <p>New teams will enter 3PO League at the beginning of a season. The Play In weeks will be used to determine their division for the upcoming season.</p>
-                <p>The Play In system will be determined when the Play Ins start, the system used depends on the amount of sign ups and leavers.</p>
-                <p>Roster rules are applied as normal during the Play In for the upcoming season, except for players who were rostered for the team in the prievious season are not roster locked for the upcoming season during Play In Matches.</p>
+                <p>The Play In system will be determined by the event organizer to the best of his abilities.</p>
+                <p>Play Ins count as part of the season for the purpose of locking pilots to a team.</p>
+                <p>Play-Ins are BO2, just as in regular season.</p>
+                <p>The first team to type anything on the play-in channel (team A) will choose which faction to fly first, and the other team (team B) will choose the map. For the second game, teams should flip faction as usual and team A chooses second map. In case of a draw, follow the same procedure as End of Season Ties (see above) but randomize the map. You can use the
+                    <a class="generic-link" href="https://trandom.zyp.mx" target="_blank">TRAndomizer</a>.</p>
 
                 <h3>Hosting and Faction</h3>
                 <p>Empire team hosts the match using the below modifiers.</p>
@@ -55,24 +58,33 @@
                 <p>Do NOT leave the match if you suspect the enemy team to have a disconnect, keep playing as normal until the game ends.</p>
 
                 <h3>Tournament Modifiers and Bans</h3>
-                <p>Due to the 3v3 format, the tournament will feature modifiers to frigate, corvette, and flagship health. Other modifiers may be introduced as well.</p>
+                <p>Due to the 3v3 format, the tournament will feature modifiers to frigate, corvette, and flagship health, among others.</p>
 
                 <h4>Modifiers:</h4>
                 <ul class="bulleted">
-                    <li>MATCH TIME 20mins</li>
-                    <li>KICKOFF TIME 3mins</li>
-                    <li>0.8 FLAGSHIP HULL</li>
-                    <li>0.8 FRIGATE HULL</li>
-                    <li>0.6 RAIDER HULL</li>
+                    <li>Match Time: 20 min</li>
+                    <li>Imperial Max Hull: 1.3</li>
+                    <li>Auxiliary Count: 1.5</li>
+                    <li>New Republic Flagship Hull: 1.2</li>
+                    <li>New Republic Capital Ship Hull: 1.2</li>
+                    <li>New Republic Capital Ship Shields: 1.2</li>
+                    <li>New Republic Corvette Hull: 0.8</li>
+                    <li>Imperial Raider Hull: 0.8</li>
                 </ul>
-
-                <h4>Bans:</h4>
+                <h4>Banned Components:</h4>
                 <ul class="bulleted">
+                    <li>TIE Bomber cannot run Reinforced Hull</li>
+                    <li>TIE Fighter cannot run Reinforced Hull</li>
+                    <li>TIE Defender cannot run Dampener Hull</li>
                     <li>Double Conc Missile</li>
+                </ul>
+                <h4>Mandated Components:</h4>
+                <ul class="bulleted">
+                    <li>TIE Defender must run Nimble Shields</li>
                 </ul>
 
                 <h3>Cookie System</h3>
-                <p>The Cookie System is a way for Teams to track points accross multiple seasons, a Team will be locked to its Team Captain. A team must play at least 3 matchups to receive cookies at the end of a season.</p>
+                <p>The Cookie System is a way for Teams to track points across multiple seasons, however only wookie9c knows how it works, so this system is frozen until wookie9c returns.</p>
 
                 <table>
                     <thead>
@@ -158,14 +170,11 @@
                 <p>Mercenaries may be pinged by a team who are struggling to field a squad. Once a mercenary plays for a team they are locked to that teams roster for the rest of the season.</p>
 
                 <h3>Signing Up and Dates</h3>
-                <p>Team Capains can sign up with a team of between 3-6 pilots.</p>
+                <p>Team Captains must sign up with a team of minimum of 3 pilots. Higher limit has been removed.</p>
                 <p>You can also sign up as a Mercenary Solo, Duo or Trio and be put with other teams when needed and hopefully make some new friends!</p>
-                <p>New teams that sign up will play in the next play ins to start the next season.</p>
-                <p>If a team has a roster of 6 locked pilots during a season it may substitute one of those pilots out for somebody else. If a team decides to do so they will incur a 3 point penalty. You may substitute as many as you like but will suffer the 3 point penalty each time.</p>
+                <p>New teams that sign up will play in the next play-ins to start the next season.</p>
+                <p>Teams may line up any of their registered pilots or not without consequence. Teams may register new pilots mid-season, but this will make Scorer cry a bit. The only restriction is that once a pilot flew for a team, they are locked to that team for the rest of the season.</p>
 
-                <p>If you have played a 7th player during a season you will suffer a 3 point penalty and must remove someone from the locked roster.</p>
-
-                <p>This rule has been put in place so that in the event a team has ran 6 locked players and a few of them have decided to not play anymore, the team can play an additional player (or multiple for multiple point penalties) and update their roster without having to forfeit every single match from that point until the end of the season.</p>
             </div>
         </div>
     </div>

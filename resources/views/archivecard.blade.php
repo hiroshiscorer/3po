@@ -55,7 +55,7 @@
         main {
             background-image: url('/images/pilot-card-bg.png');
             background-size: cover;
-            border: calc(99vh * 0.02) solid #1347df;
+            border: calc(99vh * 0.02) solid rgb(164, 143, 62);
             border-radius: calc(99vh * 0.1);
             box-shadow: 0 0 0 calc(99vh * 0.00925925925925925925925925925926) #cdd9eb inset;
             color: #cdd9eb;
