@@ -14,12 +14,12 @@
                 <p>A season will last 1 week per matchup, plus 2 additional weeks for late matches. Every team will play against every other team in the same division once.</p>
                 <p>Every map will be played across a season:</p>
                 <ul>
-                    <li>Round 1 - <strong>Sissubo</strong></li>
-                    <li>Round 2 - <strong>Yavin Prime</strong></li>
-                    <li>Round 3 - <strong>Fostar Haven</strong></li>
-                    <li>Round 4 - <strong>Zavian Abyss</strong></li>
-                    <li>Round 5 - <strong>Galitan</strong></li>
-                    <li>Round 6 - <strong>Esseles</strong></li>
+                    <li>Round 1 - <strong>Esseles</strong></li>
+                    <li>Round 2 - <strong>Fostar Haven</strong></li>
+                    <li>Round 3 - <strong>Sissubo</strong></li>
+                    <li>Round 4 - <strong>Yavin Prime</strong></li>
+                    <li>Round 5 - <strong>Zavian Abyss</strong></li>
+                    <li>Round 6 - <strong>Galitan</strong></li>
                     <li>Round 7 - <strong>Nadiri Dockyards</strong></li>
                 </ul>
 
@@ -76,6 +76,7 @@
                     <li>TIE Bomber cannot run Reinforced Hull</li>
                     <li>TIE Fighter cannot run Reinforced Hull</li>
                     <li>TIE Defender cannot run Dampener Hull</li>
+                    <li>Scrambler Shields on all ships except TIE Reaper</li>
                     <li>Double Conc Missile</li>
                 </ul>
                 <h4>Mandated Components:</h4>
