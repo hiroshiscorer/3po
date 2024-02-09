@@ -1,5 +1,5 @@
 @php
-$css_version = '1.2.4';
+$css_version = '1.0.0';
 @endphp
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
@@ -18,15 +18,13 @@ $css_version = '1.2.4';
 
 
     <!-- Favicon -->
-
-
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#a48f3e">
-    <meta name="msapplication-TileColor" content="#a48f3e">
-    <meta name="theme-color" content="#ffffff">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#aaaa99">
+    <meta name="msapplication-TileColor" content="#aaaa99">
+    <meta name="theme-color" content="#ddddcc">
 
 
     <!-- Styles -->
@@ -48,7 +46,7 @@ $css_version = '1.2.4';
             <div class="col">
                 <nav>
                     <ul>
-                        <li><a href="/"><img src="/images/logo.png" alt="3PO logo"></a></li>
+                        <li><a href="/"><img src="/images/logo.png" alt="Sabacc logo"></a></li>
                         <li><a href="/schedule">Schedule</a></li>
                         <li><a href="/teams">Teams</a></li>
                         <li><a href="/pilots">Pilots</a></li>
@@ -66,7 +64,7 @@ $css_version = '1.2.4';
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <img src="/images/logo-footer.png" alt="3PO title">
+                <img src="/images/logo-footer.png" alt="Sabacc Logo">
             </div>
             <div class="col-md-6">
                 <ul>
@@ -76,8 +74,8 @@ $css_version = '1.2.4';
                     <li><a href="/pilots">Pilots</a></li>
                     <li><a href="/rules">Rules</a></li>
                     <li><a href="/seasons">Seasons</a></li>
-                    <li><a href="https://discord.com/invite/n6VQyRuqU3"
-                           target="_blank">3PO Discord Server</a></li>
+                    <li><a href="https://discord.com/invite/KZSzsZ9SbA"
+                           target="_blank">Lucky Sabacc Server</a></li>
                 </ul>
 
             </div>

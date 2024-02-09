@@ -1,6 +1,6 @@
 :root {
-    --scfl-blue: #a48f3e;
-    --scfl-dark-blue: hsl(47, 45%, 19%);
+    --scfl-blue: #9d4b56;
+    --scfl-dark-blue: #120;
     --scfl-grey: #ebebd9;
     --3po: #a48f3e;
     --3po-trans: #a48f3e88;
@@ -251,11 +251,11 @@ body > footer ul li {
 }
 
 body > footer a {
-    color: #4b0;
+    color: #9d4b56;
 }
 
 body > footer a:hover {
-    color: #8a0;
+    color: #120;
 }
 
 footer p.dev-by {
