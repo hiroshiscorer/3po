@@ -13,6 +13,7 @@ use App\Models\season;
 use App\Models\team;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Cache;
 
 class HomeController extends Controller
 {
@@ -33,6 +34,8 @@ class HomeController extends Controller
      */
     public function index()
     {
+        Cache::flush();
+
         $season = season::orderByDesc('created_at')->first();
         $division = $season != '' ? division::where('season_id', $season->id)->get() : '';
 
@@ -227,8 +230,10 @@ class HomeController extends Controller
             // add to array
             // $all[] = $constructed;
             array_push($all, $c1);
+
         }
         return view('get-sql', compact('all'));
     }
 }
+
 
