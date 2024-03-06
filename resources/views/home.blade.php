@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col">
                 <h1 class="mtop60 mbot60 text-center"><span>Welcome to</span> Sabacc League</h1>
-                <p class="feature">Some interesting and stunning description! <br><br>It can have many paragraphs, or one!</p>
+                    <p class="feature">This is a laid-back, competitive 5vs5 fleet battle format for Squadron players of all skill levels who are active at European friendly times. We have the ambition to make the format accessible and rewarding for players new to the competitive scene, while also offering a challenge to more experienced players. <br><br>First and foremost, we want to have fun!</p>
 
                 <div class="row">
                     <div class="col-12">
