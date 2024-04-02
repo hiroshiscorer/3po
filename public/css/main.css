@@ -729,6 +729,10 @@ strong.champ {
     justify-content: center;
 }
 
+#main_stats td:nth-child(8), #main_stats td:nth-child(9), #main_stats th:nth-child(8), #main_stats th:nth-child(9) {
+    flex-shrink: 5;
+}
+
 #main_stats i {
     position: relative;
     font-size: 1.5em;
