@@ -166,6 +166,9 @@
                     </tbody>
                 </table>
 
+                <h3>Extra Weeks</h3>
+                <p>League must be played 3v3. Only exception is in the extra weeks and as a last resort measure to get the games done, where you can play 2v2 or 1v1. Both teams must agree on this.</p>
+
                 <h3>Mercenaries</h3>
                 <p>Participants who have not had the opportunity to field a team may sign on as a mercenary.</p>
                 <p>Mercenaries may be pinged by a team who are struggling to field a squad. Once a mercenary plays for a team they are locked to that teams roster for the rest of the season.</p>
