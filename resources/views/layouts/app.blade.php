@@ -1,5 +1,5 @@
 @php
-$css_version = '1.0.1';
+$css_version = '1.0.2';
 @endphp
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
