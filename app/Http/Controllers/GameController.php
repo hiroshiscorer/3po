@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\match;
+use App\Models\game;
 use Illuminate\Http\Request;
 
-class MatchController extends Controller
+class GameController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class MatchController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\match  $match
+     * @param  \App\Models\game  $match
      * @return \Illuminate\Http\Response
      */
-    public function show(match $match)
+    public function show(game $match)
     {
         //
     }
@@ -52,10 +52,10 @@ class MatchController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\match  $match
+     * @param  \App\Models\game  $match
      * @return \Illuminate\Http\Response
      */
-    public function edit(match $match)
+    public function edit(game $match)
     {
         //
     }
@@ -64,10 +64,10 @@ class MatchController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\match  $match
+     * @param  \App\Models\game  $match
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, match $match)
+    public function update(Request $request, game $match)
     {
         //
     }
@@ -75,10 +75,10 @@ class MatchController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\match  $match
+     * @param  \App\Models\game  $match
      * @return \Illuminate\Http\Response
      */
-    public function destroy(match $match)
+    public function destroy(game $match)
     {
         //
     }

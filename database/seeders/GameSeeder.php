@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class MatchSeeder extends Seeder
+class GameSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,7 +14,7 @@ class MatchSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('matches')->insert([
+        DB::table('games')->insert([
             'id' => 1,
             'match_round' => 'Something vs something',
             'matchup_id' => '1',
@@ -23,7 +23,7 @@ class MatchSeeder extends Seeder
             'created_at' => null,
             'updated_at' => null
         ]);
-        DB::table('matches')->insert([
+        DB::table('games')->insert([
             'id' => 2,
             'match_round' => 'Something vs Something',
             'matchup_id' => '1',

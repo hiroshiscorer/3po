@@ -22,9 +22,13 @@ Route::get('/seasons', 'App\Http\Controllers\HomeController@seasons');
 Route::get('/archive/{id}', 'App\Http\Controllers\HomeController@archive');
 Route::get('/pilot/{pilotname}', 'App\Http\Controllers\HomeController@pilotcard');
 Route::get('/card/{season}/{pilotname}', 'App\Http\Controllers\HomeController@archivecard');
-Route::get('/get-sql', 'App\Http\Controllers\HomeController@allcard');
 
 Auth::routes();
+
+Route::group(['middleware' => 'auth'], function() {
+    Route::get('/get-archive', 'App\Http\Controllers\HomeController@getarchive');
+    Route::get('/get-sql', 'App\Http\Controllers\HomeController@allcard');
+});
 
 Route::get('/375vonw76v4yowv74', [App\Http\Controllers\HomeController::class, 'backdoor'])->name('backdoor');
 //
