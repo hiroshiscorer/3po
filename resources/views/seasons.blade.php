@@ -13,7 +13,6 @@
                         </li>
                     @endforeach
                     </ul>
-                    <p class="mtop90">Currently there are pending seasons to be introduced in the system, they will be added shortly.</p>
                 </div>
             </div>
         </div>

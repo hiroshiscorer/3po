@@ -312,7 +312,7 @@
                                                     </h3>
                                                     <ul>
                                                         @foreach($pil as $pilot)
-                                                            <li><a href="pilots#{{ $pilot->pilot_name }}">[{{ $item->initials }}] <strong>{{ $pilot->pilot_name }}</strong> <em class="small">{{ $pilot->misc != '' ? '('.$pilot->misc.')' : '' }}</em></a>
+                                                            <li><a href="#{{ $pilot->pilot_name }}">[{{ $item->initials }}] <strong>{{ $pilot->pilot_name }}</strong> <em class="small">{{ $pilot->misc != '' ? '('.$pilot->misc.')' : '' }}</em></a>
                                                                 {!! App\Models\pilotStat::where('pilot_id', $pilot->id)->count() ? '<i class="fa fa-lock" title="This player is locked in this team."></i>' : '' !!}
                                                             </li>
                                                         @endforeach
