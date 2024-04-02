@@ -155,7 +155,7 @@
                                     <br>
                                         @php
                                             $icounter = isset($_GET['full']) ? 100000 : 10;
-                                            $recent_games = Illuminate\Support\Facades\DB::table('matches')->orderByDesc('id')->get();
+                                            $recent_games = Illuminate\Support\Facades\DB::table('games')->orderByDesc('id')->get();
 											if (count($recent_games) != 0) {
 												echo '
                                             <h3>Recent Games</h3>
