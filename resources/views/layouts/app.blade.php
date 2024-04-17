@@ -1,5 +1,5 @@
 @php
-$css_version = '1.0.2';
+$css_version = '1.0.3';
 @endphp
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
@@ -74,7 +74,7 @@ $css_version = '1.0.2';
                     <li><a href="/pilots">Pilots</a></li>
                     <li><a href="/rules">Rules</a></li>
                     <li><a href="/seasons">Seasons</a></li>
-                    <li><a href="https://discord.com/invite/KZSzsZ9SbA"
+                    <li><a href="https://discord.com/invite/EEar95bDDA"
                            target="_blank">Lucky Sabacc Server</a></li>
                 </ul>
 

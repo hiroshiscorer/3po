@@ -56,7 +56,7 @@
                     <li>
                         <h3 class="text-left">Scheduling and substitutes:</h3>
                         <ul class="bulleted">
-                            <li>Matches should be scheduled to start between 7-9pm UTC.</li>
+                            <li>Matches should be scheduled to start between 6-8pm UTC / 8-10pm CEST.</li>
                             <li>It is expected that, in the spirit of the competition, teams will make every effort to schedule games at a time convenient for most players on both sides and not schedule matches around the availability of one player.</li>
                             <li>Players available for a match must take part in at least one game of the best of 2 series. An exception is make for a Flask or Saber player who has chosen to act as Team Coach for their team during both games in a series (for the avoidance of doubt: a Coin or Staves player cannot be Team Coach in both games in a match).</li>
                             <li>Substitutes are allowed. There is no limit to how many substitutes a team may use, but only substitutes from a lower tier than the player they replace are permitted (for example a Staves player can sub for a Swords player but not the other way around). The only permitted exception is substitutes for Coins players who are allowed to be substituted by another Coins player). The Senior Admins will not grant any exceptions from this rule no matter if a player flies on-role or off-role.</li>
@@ -67,7 +67,7 @@
                     <li>
                         <h3 class="text-left">How to sign up:</h3>
                         <p>Sign up for SABACC is done per person not per team. The sign up is on the Lucky Sabacc Shift (LSS) Server in the #Sabacc-registration-office channel. Writing a post with your in-game name in this channel constitutes a registration for the championship. If you are willing to captain a team or cast matches, please mention this as well.</p>
-                        <p>Important note: Scheduling matches is always a challenge. We want to make the job for the team captains as easy as possible. Only players who are available to start matches between 7pm-9pm UTC should sign up. This does not mean that you have to be available the entire time between 7pm-9pm UTC or that you are available every day. The intention is only to have a reasonable chance to schedule at least some matches on weekdays to avoid potential scheduling clashes with SCL matches.</p>
+                        <p>Important note: Scheduling matches is always a challenge. We want to make the job for the team captains as easy as possible. Only players who are available to start matches between 6pm-8pm UTC / 8-10pm CEST should sign up. This does not mean that you have to be available the entire time between 6pm-8pm UTC / 8-10pm CEST or that you are available every day. The intention is only to have a reasonable chance to schedule at least some matches on weekdays to avoid potential scheduling clashes with SCL matches.</p>
                     </li>
                     <li>
                         <h3 class="text-left">VC rules and the Team Coach:</h3>

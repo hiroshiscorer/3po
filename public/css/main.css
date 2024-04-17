@@ -175,6 +175,14 @@ img {
 	text-align: right;
 }
 
+code {
+    color: #0f0;
+    background-color: #050;
+    padding: 1px 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #0a0 inset;
+}
+
 
 /* =========================== HEADER FOOTER =========================== */
 
