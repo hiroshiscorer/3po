@@ -15,10 +15,11 @@
                         <h3 class="text-left">Format and points:</h3>
                         <ul class="bulleted">
                             <li>5 vs. 5 fleet battles</li>
-                            <li>BO2 (best of two) match format with both games being played on the same map and each team playing one game as New Republic (NR) and one as Galactic Empire (GE)</li>
+                            <li>A match consist of 3 games with the first two games being played on the same map and each team playing one game as New Republic (NR) and one as Galactic Empire (GE)</li>
                             <li>The team playing GE will host the game.</li>
+                            <li>In the third game the team which fielded the lower tier players in game 1&2 gets to choose both the map and the faction (determination of team tiers see section 9). If both teams fielded the same tier players in game 1&2 the map for game 3 is chosen on random but must be different from the map used for game 1&2. Faction is decided by a coin flip.</li>
                             <li>The number of teams in the competition will be defined after the registration has closed. The typical roster size will be 7-8 pilots.</li>
-                            <li>Three points will be awarded to the winning team of each match-up and one point per team will be awarded in case of a draw. The outcome of all games is documented by screenshots. Both teams should take a screenshot of the scoreboard before any players leave the lobby after a game.</li>
+                            <li>One point will be awarded to the winning team in each game (meaning a team can win 3 points if it wins all three games in a match, but if the team only wins two of the games in a match it only gets 2 points while the other team gets 1 point). The outcome of all games is documented by screenshots. Both teams should take a screenshot of the scoreboard before any players leave the lobby after a game.</li>
                             <li>The competition format will be a round robin (all-play-all-tournament). The time frame for the competition will be three weeks with one extra week available as a catch-up if needed.</li>
                             <li>The map selection on the first game per match up will be set using the <em>Will of the Force</em> bot by typing <code>/r command:map</code> in the match channel. If a caster is available the caster will use the command, otherwise one of the captains uses it. The same map will then also be used for the 2nd game in the match-up. A team who has already played a certain map twice during the tournament may request re-running the map selection until another map then the one they have already used twice is selected.</li>
                             <li>The first team in a match-up to request a faction in the text chat will have the right to choose faction (so be fast if you have a faction preference).</li>
@@ -28,12 +29,12 @@
                         <h3 class="text-left">Roster formation:</h3>
                         <p>All registered players are assigned a tier by the Senior Admins. There are four tiers named after the four suits in Sabacc (Flasks, Sabers, Staves and Coins).</p>
                         <ul class="bulleted">
-                            <li><strong>Flasks:</strong> Players who are in a seed 1-5 team on SCL (including retired players who have last played in group A or B)</li>
-                            <li><strong>Sabers:</strong> Players who are in a seed 5-10 team on SCL (including retired players who have last played in group C) and players who are roster locked for a 3PO Rancor team</li>
-                            <li><strong>Staves:</strong> Players who are in a seed 11-16 team on SCL (including retired players who have last played in group D or group E) and players who are roster locked for a 3PO Bantha team</li>
-                            <li><strong>Coins:</strong> All players with no previous experience in competitive Squadrons or players who have only played the 1st Sabacc tournament but no other competitive formats</li>
+                            <li><strong>Flasks:</strong> Players who are in group A in SCL (including retired players who have last played in group A)</li>
+                            <li><strong>Sabers:</strong> Players who are in group B in SCL (including retired players who have last played in group B) and have been roster locked for a 3PO Rancor team last 3PO season or have not played in the last 3PO season.</li>
+                            <li><strong>Staves:</strong> Players who are in group B in SCL (including retired players who have last played in group B or lower) and have been roster locked for a 3PO Bantha team last 3PO season.</li>
+                            <li><strong>Coins:</strong> All players who have played less than 5 competitive Squadrons matches previously.</li>
                         </ul>
-                        <p>Should a player play in both SCL and 3PO, the SABACC tier assignment will be based on the highest league placement of the player (example: a player is roster locked for a 3PO Rancor team and a SCL seed 11-16 team → the SABACC tier of the player will be Saber). If a player has played in one tier in Sabacc season 1 but is assigned a different tier now the admins have the right to decide to keep the season 1 tier if they deem it more appropriate to the players skill or Sabacc team allocation.</p>
+                        <p>The admins have the right to assign a player to a different tier then stated above if they deem it more appropriate to the players skill or Sabacc team allocation.</p>
                         <p>Teams are assigned randomly, with each team getting a broadly equal number of Flasks, Sabers, Staves and Coins pilots. The Senior Admins have the right to make manual adjustments to this random assignment if for instance one team ends up without anyone who can fly support. Manual adjustments should be an exception and must be communicated transparently by the admins.</p>
                         <p><em>Example:</em></p>
                         <p>22 pilots have signed up for the competition. 3 in Flasks, 5 in Sabers, 7 in Staves and 7 in Coins -> Three teams with 7-8 players can be formed.</p>
@@ -47,16 +48,16 @@
                     <li>
                         <h3 class="text-left">Modifiers:</h3>
                         <ul class="bulleted">
-                            <li>SCL modifiers will be used (see list of modifiers at the end of this document)</li>
+                            <li>SCL season 12 modifiers will be used (see list of modifiers at the end of this document)</li>
                             <li>Players in the Coins tier will be exempt from the SCL component bans meaning they can use any load out for their ships (for instance reinforced hull on the Tie bomber).</li>
-                            <li>Player in the Staves tier will use the SCL mandates on components.</li>
+                            <li>Player in the Staves tier will use the SCL season 12 mandates on components.</li>
                             <li>Players in the Flasks and Saber tiers will face additional component bans on top of those mandated by SCL. For the list of bans see section 10.</li>
                         </ul>
                     </li>
                     <li>
                         <h3 class="text-left">Scheduling and substitutes:</h3>
                         <ul class="bulleted">
-                            <li>Matches should be scheduled to start between 6-8pm UTC / 8-10pm CEST.</li>
+                            <li>Matches should be scheduled to start between 7-9pm UTC, but other match times are allowed if both teams agree.</li>
                             <li>It is expected that, in the spirit of the competition, teams will make every effort to schedule games at a time convenient for most players on both sides and not schedule matches around the availability of one player.</li>
                             <li>Players available for a match must take part in at least one game of the best of 2 series. An exception is make for a Flask or Saber player who has chosen to act as Team Coach for their team during both games in a series (for the avoidance of doubt: a Coin or Staves player cannot be Team Coach in both games in a match).</li>
                             <li>Substitutes are allowed. There is no limit to how many substitutes a team may use, but only substitutes from a lower tier than the player they replace are permitted (for example a Staves player can sub for a Swords player but not the other way around). The only permitted exception is substitutes for Coins players who are allowed to be substituted by another Coins player). The Senior Admins will not grant any exceptions from this rule no matter if a player flies on-role or off-role.</li>
@@ -89,7 +90,7 @@
                     <li>
                         <h3 class="text-left">Admins</h3>
                         <p>The whole point of this event is to have fun and to have some laid-back, reasonably well-balanced games that players of all skill levels and experience can enjoy.</p>
-                        <p>However, we appreciate that “good fences make good neighbors” and as such the competition has three Senior Admins: Schneeflockchen, PaddyBatman and DecoyTango who will answer questions, take on feedback and consider constructive suggestions, and resolve any issues that may arise. Each intends to play in the competition and therefore acknowledges a potential conflict of interest. Senior Admins will recuse themselves from involvement in the resolution of any issue directly involving them or their team / teammates but otherwise will consider issues collectively.</p>
+                        <p>However, we appreciate that “good fences make good neighbors” and as such the competition has three Senior Admins: Schneeflockchen, PaddyBatman and TRA_Scorer who will answer questions, take on feedback and consider constructive suggestions, and resolve any issues that may arise. Each intends to play in the competition and therefore acknowledges a potential conflict of interest. Senior Admins will recuse themselves from involvement in the resolution of any issue directly involving them or their team / teammates but otherwise will consider issues collectively.</p>
                         <p>The Senior Admins will aim to operate with as much transparency as possible, but participants are asked to understand that this is not always possible. The decision of the Senior Admins is final.</p>
                     </li>
                     <li>
@@ -115,6 +116,24 @@
                             <li>OOP (out of phase) of a flagship before both mid-ships are destroyed is permitted. The admins are aware that this is a topic which has seen much discussion in other leagues the past. Therefore we want to explain why we explicitly allow such OOP: We think it highly unlikely that such an OOP is possible in SABACC given the component bans and the random team composition. However, should a team succeed in training up their lower tier pilots to successfully perform such OOP in a match, we believe they fully deserve the win considering that they have very much acted in the spirit of this competition by spending much time coaching their lower tier team members and teaching them the intricacies of Squadrons.</li>
                             <li>Should two teams have an equal number of points at the end of the championship, the result of the match between the teams will determine the teams’ rank. Should the match between the teams be a draw, the team with the lower number of deaths in the match between them will be ranked higher.</li>
                             <li>Should more than two teams be tied for points and are in a stalemate in their direct matchups, the sum of the total number of death in their direct matchups will decide. If even the number of direct death is equal a BO3 final match will be played to determine the tournament champion.</li>
+                            <li>
+                                If a team is using banned components they lose one point for each banned component they
+                                have used. These points are awarded to their components instead. <br>
+                                <em>Example 1</em>: Team A uses one banned component and wins the game. Instead of 3 points for a
+                                win they only get 2 points while their opponents get 1 point. <br>
+                                <em>Example 2</em>: uses one banned component and wins the game. Instead of 3 points for a win they
+                                only get 2 points while their opponents get 1 point. <br>
+                                <em>Example 3</em>: Team A uses one banned component and loses the game. Instead of their opponents
+                                getting 3 points their opponents get four points.
+                            </li>
+                            <li>Determination of overall player tiers in a match-up is done by a weighted sum. Flasks count 3
+                                points, Saber 2 points, Staves 1 point and Coins 0 points. <br><br>
+                                <em>Example</em>:
+                                <ul>
+                                    <li>Team A has 1 Flask (3), 1 Saber (2), 2 Staves (1) and 1 Coin (0): 3+2+1·2+0=7</li>
+                                    <li>Team B would be ahead with less "combined card points" and would get to choose map and faction for game 3.</li>
+                                </ul>
+                                </li>
                         </ul>
                     </li>
                     <li>
@@ -268,6 +287,9 @@
                                 <td>X-wings cannot run Scrambler Shields</td>
                             </tr>
                             <tr>
+                                <td>U-wings cannot run Scrambler Shields</td>
+                            </tr>
+                            <tr>
                                 <td>TIE Defender must run Nimble Shields</td>
                             </tr>
                             <tr>
@@ -302,6 +324,9 @@
                             </tr>
                             <tr>
                                 <td>X-wings cannot run Scrambler Shields</td>
+                            </tr>
+                            <tr>
+                                <td>U-wings cannot run Scrambler Shields</td>
                             </tr>
                             <tr>
                                 <td>TIE Defender must run Nimble Shields</td>
