@@ -129,7 +129,7 @@
                             <li>Determination of overall player tiers in a match-up is done by a weighted sum. Flasks count 3
                                 points, Saber 2 points, Staves 1 point and Coins 0 points. <br><br>
                                 <em>Example</em>:
-                                <ul>
+                                <ul class="bulleted" style="list-style-type: circle">
                                     <li>Team A has 1 Flask (3), 1 Saber (2), 2 Staves (1) and 1 Coin (0): 3+2+1·2+0=7</li>
                                     <li>Team B would be ahead with less "combined card points" and would get to choose map and faction for game 3.</li>
                                 </ul>
