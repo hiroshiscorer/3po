@@ -220,9 +220,11 @@
                                                                         <tbody>
                                                         ';
 														foreach ($stats1 as $stat) {
+															$suit_extra = isset($_GET['suit']) ? 'suits '.\App\Models\pilot::where('id', $stat->pilot_id)->first()->misc : '';
+															$suit_format = isset($_GET['suitalt']) ? ' alt' : '';
 															echo '
                                                                         <tr>
-                                                                            <td>'.$stat->pilot_name.'</td>
+                                                                            <td class="'.strtolower($suit_extra).$suit_format.'" title="'.substr($suit_extra, 6).'">'.$stat->pilot_name.'</td>
                                                                             <td>'.$stat->score.'</td>
                                                                             <td>'.$stat->kills.'</td>
                                                                             <td>'.$stat->deaths.'</td>
@@ -257,9 +259,11 @@
                                                                         <tbody>
                                                         ';
 														foreach ($stats2 as $stat) {
+															$suit_extra = isset($_GET['suit']) ? 'suits '.\App\Models\pilot::where('id', $stat->pilot_id)->first()->misc : '';
+															$suit_format = isset($_GET['suitalt']) ? ' alt' : '';
 															echo '
                                                                         <tr>
-                                                                            <td>'.$stat->pilot_name.'</td>
+                                                                            <td class="'.strtolower($suit_extra).$suit_format.'" title="'.substr($suit_extra, 6).'">'.$stat->pilot_name.'</td>
                                                                             <td>'.$stat->score.'</td>
                                                                             <td>'.$stat->kills.'</td>
                                                                             <td>'.$stat->deaths.'</td>

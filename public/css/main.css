@@ -562,6 +562,40 @@ p.no-season a:hover {
     min-width: 1.35em;
 }
 
+.single-match-stats td.suits {
+    cursor: help;
+}
+
+.single-match-stats td.flask {
+    color: #aa0;
+}
+.single-match-stats td.saber {
+    color: #06c;
+}
+.single-match-stats td.stave {
+    color: #a40;
+}
+.single-match-stats td.coin {
+    color: #333;
+}
+
+.single-match-stats td.flask.alt {
+    background-color: #cc0;
+    color: inherit;
+}
+.single-match-stats td.saber.alt {
+    background-color: #06c;
+    color: #fff;
+}
+.single-match-stats td.stave.alt {
+    background-color: #a40;
+    color: #fff;
+}
+.single-match-stats td.coin.alt {
+    background-color: #333;
+    color: #fff;
+}
+
 strong.champ {
     animation: champy 5s infinite ease-in-out;
     font-size: 3em;
