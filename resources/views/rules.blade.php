@@ -82,6 +82,7 @@
                 <h4>Mandated Components:</h4>
                 <ul class="bulleted">
                     <li>TIE Defender must run Nimble Shields</li>
+                    <li>B-Wing must run Deflector Hull if running Proton Bombs and Gyro/Aux Control Module</li>
                 </ul>
 
                 <h3>Cookie System</h3>
