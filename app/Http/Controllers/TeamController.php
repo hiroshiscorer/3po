@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\division;
 use App\Models\team;
+use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class TeamController extends Controller
 {
@@ -14,7 +17,9 @@ class TeamController extends Controller
      */
     public function index()
     {
-        //
+        $teams = team::all();
+        $divisions = division::all();
+        return view('admin.team', compact('teams', 'divisions'));
     }
 
     /**
@@ -35,7 +40,25 @@ class TeamController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if (!Auth::check()) {
+            return redirect('home');
+        }
+        $team = new team();
+        $team->team_name = $request->team_name;
+        $team->initials = $request->initials ?? '';
+        $team->logo = $request->logo ?? '';
+        $team->club = $request->club ?? '';
+        if (division::where('id', $request->division_id)->count() == 0) {
+            return redirect('admin-team')->with([
+                'message' => 'data-error'
+            ]);
+        }
+        $team->division_id = $request->division_id;
+        $team->save();
+
+        return redirect('admin-team')->with([
+            'message' => 'add'
+        ]);
     }
 
     /**
@@ -55,9 +78,8 @@ class TeamController extends Controller
      * @param  \App\Models\team  $team
      * @return \Illuminate\Http\Response
      */
-    public function edit(team $team)
+    public function edit(Request $request)
     {
-        //
     }
 
     /**
@@ -67,9 +89,27 @@ class TeamController extends Controller
      * @param  \App\Models\team  $team
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, team $team)
+    public function update(Request $request)
     {
-        //
+        if (!Auth::check()) {
+            return redirect('home');
+        }
+        $team = team::find($request->id);
+        $team->team_name = $request->team_name;
+        $team->initials = $request->initials ?? '';
+        $team->club = $request->club ?? '';
+        $team->logo = $request->logo ?? '';
+        if (division::where('id', $request->division_id)->count() == 0) {
+            return redirect('admin-team')->with([
+                'message' => 'data-error'
+            ]);
+        }
+        $team->division_id = $request->division_id;
+        $team->save();
+
+        return redirect('admin-team')->with([
+            'message' => 'edit'
+        ]);
     }
 
     /**
@@ -78,8 +118,34 @@ class TeamController extends Controller
      * @param  \App\Models\team  $team
      * @return \Illuminate\Http\Response
      */
-    public function destroy(team $team)
+    public function destroy(Request $request)
     {
-        //
+        if (!Auth::check()) {
+            return redirect('home');
+        }
+        $team = team::find($request->id);
+        try {
+            $team->delete();
+        } catch(QueryException $e) {
+            return redirect('admin-team')->with([
+                'message' => 'error'
+            ]);
+        }
+        return redirect('admin-team')->with([
+            'message' => 'delete'
+        ]);
     }
+
+    public function clear()
+    {
+        if (!Auth::check()) {
+            return redirect('home');
+        }
+        $deleted = team::query()->delete();
+        return redirect('admin-team')->with([
+            'message' => 'clear'
+        ]);
+    }
+
+
 }

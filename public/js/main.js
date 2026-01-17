@@ -158,6 +158,46 @@ $(document).ready(function(){
         });
     }
 
+    if ($('.admin-toggle').length) {
+        $('.admin-toggle').on('click', function() {
+            $(this).siblings().slideToggle();
+            $(this).find('i').toggleClass('fa-rotate-180');
+            // $(this).find('i').toggleClass('fa-chevron-up');
+        });
+    }
+
+    if ($('.datepicker-ui').length) {
+        $('.datepicker-ui').datepicker({
+            dateFormat: 'd MM yy'
+        });
+    }
+
+    if ($('#admin-report').length) {
+        $('#new-report-matchup_id').on('change', function(){
+            let one = $(this).find('option:selected').attr('data-team1');
+            let two = $(this).find('option:selected').attr('data-team2');
+            $('.pilot-list').find('option').each(function(){
+                let id = $(this).attr('data-team');
+
+                if (id == one || id == two) {
+                    $(this).css('display', 'initial');
+
+                } else {
+                    $(this).css('display', 'none');
+                }
+            });
+        });
+        $('#1-new-report-faction').on('change', function(){
+            if ($(this).val() == 0) {
+                console.log('New Republic selected');
+                $('#2-new-report-faction').val('1')
+            } else {
+                console.log('Empire selected');
+                $('#2-new-report-faction').val('0')
+            }
+        });
+    }
+
 });
 
 function compareSecondColumnA(a, b) {

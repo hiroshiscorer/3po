@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\season;
+use Exception;
+use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class SeasonController extends Controller
 {
@@ -14,7 +17,8 @@ class SeasonController extends Controller
      */
     public function index()
     {
-        //
+        $seasons = season::all();
+        return view('admin.season', compact('seasons'));
     }
 
     /**
@@ -35,7 +39,19 @@ class SeasonController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if (!Auth::check()) {
+            return redirect('home');
+        }
+        $season = new season();
+        $season->season_name = $request->season_name;
+        $season->type = $request->type == 'tourney' ? 'tourney' : 'league';
+        $season->rounds = 1;
+        $season->show = 0;
+        $season->save();
+
+        return redirect('admin-season')->with([
+            'message' => 'add'
+        ]);
     }
 
     /**
@@ -55,9 +71,8 @@ class SeasonController extends Controller
      * @param  \App\Models\season  $season
      * @return \Illuminate\Http\Response
      */
-    public function edit(season $season)
+    public function edit(Request $request)
     {
-        //
     }
 
     /**
@@ -67,9 +82,20 @@ class SeasonController extends Controller
      * @param  \App\Models\season  $season
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, season $season)
+    public function update(Request $request)
     {
-        //
+        if (!Auth::check()) {
+            return redirect('home');
+        }
+        $season = season::find($request->id);
+        $season->season_name = $request->season_name;
+        $season->type = $request->type == 'tourney' ? 'tourney' : 'league';
+        $season->show = $request->show == '1' ? '1' : '0';
+        $season->save();
+
+        return redirect('admin-season')->with([
+            'message' => 'edit'
+        ]);
     }
 
     /**
@@ -78,8 +104,21 @@ class SeasonController extends Controller
      * @param  \App\Models\season  $season
      * @return \Illuminate\Http\Response
      */
-    public function destroy(season $season)
+    public function destroy(Request $request)
     {
-        //
+        if (!Auth::check()) {
+            return redirect('home');
+        }
+        $season = season::find($request->id);
+        try {
+            $season->delete();
+        } catch(QueryException $e) {
+            return redirect('admin-season')->with([
+            'message' => 'error'
+        ]);
+        }
+        return redirect('admin-season')->with([
+            'message' => 'delete'
+        ]);
     }
 }

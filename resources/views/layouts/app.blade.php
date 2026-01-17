@@ -1,5 +1,5 @@
 @php
-$css_version = '1.1.1';
+$css_version = '1.2.5';
 @endphp
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
@@ -15,7 +15,7 @@ $css_version = '1.1.1';
     <!-- Scripts -->
     <script src="/js/jquery-3.1.1.min.js" defer></script>
     <script src="/js/main.js?v={{ $css_version }}" defer></script>
-
+    @yield('js-imports')
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -32,6 +32,7 @@ $css_version = '1.1.1';
     <link href="/css/font-awesome.css" rel="stylesheet">
     <link href="/css/main.css?v={{ $css_version }}" rel="stylesheet">
     <link href="/css/responsive.css?v={{ $css_version }}" rel="stylesheet">
+    @yield('css-imports')
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -76,6 +77,9 @@ $css_version = '1.1.1';
                     <li><a href="/seasons">Seasons</a></li>
                     <li><a href="https://discord.com/invite/EEar95bDDA"
                            target="_blank">Lucky Sabacc Server</a></li>
+                    @if(\Illuminate\Support\Facades\Auth::check())
+                        <li><a class="admin" href="/admin">Admin</a></li>
+                    @endif
                 </ul>
 
             </div>
