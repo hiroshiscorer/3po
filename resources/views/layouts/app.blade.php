@@ -15,7 +15,7 @@ $css_version = '1.2.5';
     <!-- Scripts -->
     <script src="/js/jquery-3.1.1.min.js" defer></script>
     <script src="/js/main.js?v={{ $css_version }}" defer></script>
-
+    @yield('js-imports')
 
     <!-- Favicon -->
 
@@ -34,6 +34,7 @@ $css_version = '1.2.5';
     <link href="/css/font-awesome.css" rel="stylesheet">
     <link href="/css/main.css?v={{ $css_version }}" rel="stylesheet">
     <link href="/css/responsive.css?v={{ $css_version }}" rel="stylesheet">
+    @yield('css-imports')
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,6 +79,9 @@ $css_version = '1.2.5';
                     <li><a href="/seasons">Seasons</a></li>
                     <li><a href="https://discord.com/invite/n6VQyRuqU3"
                            target="_blank">3PO Discord Server</a></li>
+                    @if(\Illuminate\Support\Facades\Auth::check())
+                        <li><a class="admin" href="/admin">Admin</a></li>
+                    @endif
                 </ul>
 
             </div>

@@ -79,12 +79,28 @@ img {
 	padding-bottom: 60px;
 }
 
+.ptop0 {
+    padding-top: 0 !important;
+}
+
+.pbot0 {
+    padding-bottom: 0 !important;
+}
+
 .mtop {
 	margin-top: 30px;
 }
 
 .mbot {
 	margin-bottom: 30px;
+}
+
+.mtop0 {
+	margin-top: 0 !important;
+}
+
+.mbot0 {
+	margin-bottom: 0 !important;
 }
 
 .mtop30 {
@@ -256,6 +272,14 @@ body > footer a {
 
 body > footer a:hover {
     color: #8a0;
+}
+
+body > footer a.admin {
+    color: #b80;
+}
+
+body > footer a.admin:hover {
+    color: #840;
 }
 
 footer p.dev-by {
@@ -1031,4 +1055,204 @@ table.season-one .xl69, table.season-one .xl73 {
 
 table.season-one .xl70 {
     background-color: #ff04;
+}
+
+/* =========================== ADMIN =========================== */
+
+.admin h3 {
+    border-bottom: 2px solid #fff8;
+    padding-bottom: 5px;
+}
+.admin-menu {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.admin-menu li {
+    position: relative;
+    height: 150px;
+    width: 150px;
+
+}
+.admin-menu li a {
+    background-color: #a48f3e88;
+    border-radius: 10px;
+    box-shadow: 2px 2px #0003;
+    color: #ddd;
+    display: flex;
+    font-size: 1.4em;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 15px;
+    transition: 250ms ease;
+    text-align: center;
+}
+
+.admin-menu li a:hover {
+    background-color: #1e3c7a88;
+    color: #fff;
+}
+
+.admin-menu li a.special {
+    background-color: #a46f3e88;
+}
+
+.admin-menu li a.special:hover {
+    background-color: #1e5c7a88;
+    color: #fff;
+}
+
+.admin .back-to-admin {
+    background-image: linear-gradient(90deg, var(--3po-trans), transparent);
+    padding: 5px;
+    position: relative;
+}
+
+.admin form, .admin .form-like {
+    background-color: #fff1;
+    border-radius: 5px;
+    margin: 15px 0 30px;
+    padding: 15px;
+}
+
+
+.admin .back-to-admin a {
+    color: #ddd;
+    transition: 150ms ease;
+    display: block;
+}
+
+.admin .back-to-admin a:hover {
+    background-color: #a331;
+    color: #fff;
+}
+
+.admin form input, .admin form label, .admin form select, .admin form button {
+    display: block;
+    margin: 5px 0;
+}
+
+.admin form input, .admin form label {
+    width: 100%;
+}
+
+.admin form label {
+    margin-top: 20px;
+}
+
+.admin-toggle ~ div {
+    display: none;
+    margin-top: 0;
+    flex-grow: 1;
+}
+
+.admin-toggle i {
+    transition: 150ms ease;
+}
+
+h4.admin-toggle {
+    background-color: #fff1;
+    cursor: pointer;
+    padding: 10px 15px;
+    margin: 30px 0 0;
+}
+
+.admin-toggle span.accent {
+    color: var(--scfl-grey);
+    display: inline;
+    font-size: 0.7em;
+}
+
+.admin form button {
+    background-color: var(--3po-trans);
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.3em;
+    margin-top: 30px;
+    min-width: 100px;
+    padding: 10px;
+}
+
+.admin form button:hover {
+    background-color: var(--3po);
+}
+
+.admin form button.delete {
+    background-color: #5008;
+    margin-top: 0;
+
+}
+.admin form button.delete:hover {
+    background-color: #8008;
+}
+
+.operation-result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid var(--3po);
+    background-color: var(--3po-trans);
+    height: 100px;
+    margin: 30px 0;
+    font-size: 1.3em;
+}
+
+.operation-result.error {
+    border: 5px solid #800;
+    background-color: #8008;
+}
+
+.admin-condensed li {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.admin-condensed li h4 {
+    flex-basis: 100%;
+}
+
+.admin-condensed form:first-child {
+    border-radius: 5px 5px 0 0;
+}
+.admin-condensed form:last-child {
+    border-radius: 0 0 5px 5px;
+}
+
+.admin .admin-minimum {
+    position: relative;
+}
+
+.admin .admin-minimum form {
+    font-size: 0.7em;
+    margin: 5px;
+    padding: 5px 15px;
+}
+
+.admin .admin-minimum label {
+    margin: 0;
+}
+
+.admin .admin-minimum form button {
+    font-size: 0.8em;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+.admin .stat-add-on {
+    background: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 0 !important;
+}
+.admin .stat-add-on button {
+    width: 245px;
 }

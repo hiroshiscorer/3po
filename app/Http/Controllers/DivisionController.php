@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\division;
+use App\Models\season;
 use Illuminate\Http\Request;
+use Illuminate\Database\QueryException;
+use Illuminate\Support\Facades\Auth;
 
 class DivisionController extends Controller
 {
@@ -14,7 +17,9 @@ class DivisionController extends Controller
      */
     public function index()
     {
-        //
+        $season = season::first();
+        $divisions = division::all();
+        return view('admin.division', compact('season', 'divisions'));
     }
 
     /**
@@ -35,7 +40,23 @@ class DivisionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if (!Auth::check()) {
+            return redirect('home');
+        }
+
+        $division = new division();
+        $division->division_name = $request->division_name;
+        if (season::where('id', $request->season_id)->count() == 0) {
+            return redirect('admin-division')->with([
+                'message' => 'data-error'
+            ]);
+        }
+        $division->season_id = $request->season_id;
+        $division->rounds = $request->rounds;
+        $division->save();
+        return redirect('admin-division')->with([
+            'message' => 'add'
+        ]);
     }
 
     /**
@@ -55,9 +76,8 @@ class DivisionController extends Controller
      * @param  \App\Models\division  $division
      * @return \Illuminate\Http\Response
      */
-    public function edit(division $division)
+    public function edit(Request $request)
     {
-        //
     }
 
     /**
@@ -67,9 +87,24 @@ class DivisionController extends Controller
      * @param  \App\Models\division  $division
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, division $division)
+    public function update(Request $request)
     {
-        //
+        if (!Auth::check()) {
+            return redirect('home');
+        }
+        $division = division::find($request->id);
+        $division->division_name = $request->division_name;
+        if (season::where('id', $request->season_id)->count() == 0) {
+            return redirect('admin-division')->with([
+                'message' => 'data-error'
+            ]);
+        }
+        $division->season_id = $request->season_id;
+        $division->rounds = $request->rounds;
+        $division->save();
+        return redirect('admin-division')->with([
+            'message' => 'edit'
+        ]);
     }
 
     /**
@@ -78,8 +113,21 @@ class DivisionController extends Controller
      * @param  \App\Models\division  $division
      * @return \Illuminate\Http\Response
      */
-    public function destroy(division $division)
+    public function destroy(Request $request)
     {
-        //
+        if (!Auth::check()) {
+            return redirect('home');
+        }
+        $division = division::find($request->id);
+        try {
+            $division->delete();
+        } catch(QueryException $e) {
+            return redirect('admin-division')->with([
+                'message' => 'error'
+            ]);
+        }
+        return redirect('admin-division')->with([
+            'message' => 'delete'
+        ]);
     }
 }
