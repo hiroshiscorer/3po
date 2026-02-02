@@ -8,7 +8,7 @@
 		use App\Models\game;
 		use App\Models\division;
 
-		$number_pilot_per_game = 6; // 3PO
+		$number_pilot_per_game = 10; // 3PO
 		// $number_pilot_per_game = 10; // SABACC
     @endphp
     <main id="admin-report" class="admin">
