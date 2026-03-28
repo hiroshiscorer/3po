@@ -12,7 +12,7 @@
                 <p>The League will be split into multiple divisions to keep the games as close as possible.</p>
                 <p>The nominal Divisions are Rancor, Nexu, Bantha, Mynock, Porg. If there are not enough teams to fill a minimum of 4 teams per division, then less divisions will be open. At the end of a season the top 2 teams in a division will move up to a higher division (except in Rancor) and the bottom 2 teams will move down a division (except in Porg).</p>
                 <p>A season will last 1 week per matchup, plus 2 additional weeks for late matches. Every team will play against every other team in the same division once.</p>
-                <p>Every map will be played across a season:</p>
+                <p>Map schedule is as follows:</p>
                 <ul>
                     <li>Round 1 - <strong>Esseles</strong></li>
                     <li>Round 2 - <strong>Fostar Haven</strong></li>
@@ -24,11 +24,11 @@
                 </ul>
 
                 <h3>End of Season Ties</h3>
-                <p>In the event of a points tie at the end of a season the following will occur: The result of the match up between the teams will determine placing. If that it is a draw the teams will schedule and partake in a 3v3 Last Team Standing Dogfight.</p>
+                <p>In the event of a points tie at the end of a season the following criteria will apply: The result of the matchup between the teams will determine placing. If that is a draw, then the teams will schedule and partake in a 3v3 Last Team Standing Dogfight.</p>
 
-                <h4>3v3 LTS DFTB:</h4>
+                <h4>3v3 Last Team Standing Dogfight Tie Breaker:</h4>
                 <p>Same Map as the match up for the teams was played. Empire Host.</p>
-                <p>Coinflip - winner picks either Faction or an opponent ship ban, loser gets the other.</p>
+                <p>Coinflip - the winner may pick either 1) Faction or 2) an opponent ship ban, loser of the coinflip gets the other choice.</p>
                 <p>Once a player dies they MUST leave the match.</p>
                 <p>Modifiers (Dogfight):</p>
                 <ul class="bulleted">
@@ -68,8 +68,10 @@
                     <li>New Republic Flagship Hull: 1.2</li>
                     <li>New Republic Capital Ship Hull: 1.2</li>
                     <li>New Republic Capital Ship Shields: 1.2</li>
+                    <li>New Republic Corvette Shields: 0.6</li>
                     <li>New Republic Corvette Hull: 0.8</li>
-                    <li>Imperial Raider Hull: 0.8</li>
+                    <li>Imperial Raider Shields: 0.8</li>
+                    <li>Imperial Raider Hull: 0.6</li>
                 </ul>
                 <h4>Banned Components:</h4>
                 <ul class="bulleted">
@@ -168,17 +170,19 @@
                 </table>
 
                 <h3>Extra Weeks</h3>
-                <p>League must be played 3v3. Only exception is in the extra weeks and as a last resort measure to get the games done, where you can play 2v2 or 1v1. Both teams must agree on this.</p>
+                <p>League must be played 3v3. The only exception is in the extra weeks and as a last resort measure to get the games done, where you can play 2v2 or 1v1. Both teams must agree on this.</p>
 
                 <h3>Mercenaries</h3>
                 <p>Participants who have not had the opportunity to field a team may sign on as a mercenary.</p>
-                <p>Mercenaries may be pinged by a team who are struggling to field a squad. Once a mercenary plays for a team they are locked to that teams roster for the rest of the season.</p>
+                <p>Mercenaries may be pinged by a team who are struggling to field a squad.</p>
+
+                <h3>Subs</h3>
+                <p>Due to popular outcry, 3PO will allow subs (Cause fielding 3 pilots is apparently much harder than 5 grumble grumble). A pilot that is part of mercenaries or not signed up at all can sub without limits, and their stats will not be tracked. Players that are part of teams may sub up to two times.</p>
 
                 <h3>Signing Up and Dates</h3>
                 <p>Team Captains must sign up with a team of minimum of 3 pilots. Higher limit has been removed.</p>
-                <p>You can also sign up as a Mercenary Solo, Duo or Trio and be put with other teams when needed and hopefully make some new friends!</p>
-                <p>New teams that sign up will play in the next play-ins to start the next season.</p>
-                <p>Teams may line up any of their registered pilots or not without consequence. Teams may register new pilots mid-season, but this will make Scorer cry a bit. The only restriction is that once a pilot flew for a team, they are locked to that team for the rest of the season.</p>
+                <p>In case the divisions and team count allow, and there are new teams that sign up, they will participate in the next play-ins to try to allocate the team in the best possible division. Play-in procedures will be subject to the admins.</p>
+                <p>Teams may line up any of their registered pilots. If any player is not lined up at all, there will be no consequence. Teams may register new pilots mid-season, but this will make Scorer cry a bit (actually a lot, please sign up pilots promptly). Pilots may sub as stated above, but they will be tied to the team they signed up for the rest of the season.</p>
 
             </div>
         </div>
