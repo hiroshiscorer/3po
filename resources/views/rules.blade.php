@@ -65,26 +65,26 @@
                     <li>Match Time: 20 min</li>
                     <li>Imperial Max Hull: 1.3</li>
                     <li>Auxiliary Count: 1.5</li>
-                    <li>New Republic Flagship Hull: 1.2</li>
-                    <li>New Republic Capital Ship Hull: 1.2</li>
-                    <li>New Republic Capital Ship Shields: 1.2</li>
-                    <li>New Republic Corvette Shields: 0.6</li>
-                    <li>New Republic Corvette Hull: 0.8</li>
-                    <li>Imperial Raider Shields: 0.8</li>
-                    <li>Imperial Raider Hull: 0.6</li>
+                    <li>Countermeasure Cooldown Time: 1.5</li>
+                    <li><em class="rebel">New Republic</em> Flagship Hull: 1.2</li>
+                    <li><em class="rebel">New Republic</em> Capital Ship Hull: 1.2</li>
+                    <li><em class="rebel">New Republic</em> Capital Ship Shields: 1.2</li>
+                    <li><em class="rebel">New Republic</em> Corvette Shields: 0.6</li>
+                    <li><em class="rebel">New Republic</em> Corvette Hull: 0.8</li>
+                    <li><em class="imperial">Imperial</em> Raider Shields: 0.8</li>
+                    <li><em class="imperial">Imperial</em> Raider Hull: 0.6</li>
                 </ul>
                 <h4>Banned Components:</h4>
                 <ul class="bulleted">
-                    <li>TIE Bomber cannot run Reinforced Hull</li>
-                    <li>TIE Fighter cannot run Reinforced Hull</li>
-                    <li>TIE Defender cannot run Dampener Hull</li>
-                    <li>Scrambler Shields on all ships except TIE Reaper</li>
-                    <li>Double Conc Missile</li>
+                    <li>Scrambler Shields on all ships except <em class="neutral">TIE Reaper</em></li>
+                    <li>Double Conc Missile Exploit</li>
                 </ul>
-                <h4>Mandated Components:</h4>
+                <h4>Ship specific:</h4>
                 <ul class="bulleted">
-                    <li>TIE Defender must run Nimble Shields</li>
-                    <li>B-Wing must run Deflector Hull if running Proton Bombs and Gyro/Aux Control Module</li>
+                    <li><em class="neutral">TIE Bomber</em> cannot run Reinforced Hull</li>
+                    <li><em class="neutral">TIE Fighter</em> cannot run Reinforced Hull</li>
+                    <li><em class="neutral">TIE Defender</em> cannot run Dampener Hull and must run Nimble Shields</li>
+                    <li><em class="neutral">B-Wing</em> must run Deflector Hull <strong>if</strong> running Proton Bombs and Gyro/Aux Control Module</li>
                 </ul>
 
                 <h3>Cookie System</h3>
@@ -177,7 +177,7 @@
                 <p>Mercenaries may be pinged by a team who are struggling to field a squad.</p>
 
                 <h3>Subs</h3>
-                <p>Due to popular outcry, 3PO will allow subs (Cause fielding 3 pilots is apparently much harder than 5 grumble grumble). A pilot that is part of mercenaries or not signed up at all can sub without limits, and their stats will not be tracked. Players that are part of teams may sub up to two times.</p>
+                <p>Due to popular outcry, 3PO will allow subs (Cause fielding 3 pilots is apparently much harder than 5 grumble grumble). A pilot that is part of mercenaries can sub without limits, and their stats will not be tracked. An unregistered pilot will be made part of the team they sub in. Players that are part of teams may sub another team only once.</p>
 
                 <h3>Signing Up and Dates</h3>
                 <p>Team Captains must sign up with a team of minimum of 3 pilots. Higher limit has been removed.</p>

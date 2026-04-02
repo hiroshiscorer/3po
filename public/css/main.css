@@ -19,6 +19,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
+    color: #fff;
     font-family: 'Titillium Web', sans-serif;
 }
 
@@ -191,6 +192,17 @@ img {
 	text-align: right;
 }
 
+em.rebel {
+    color: #e80;
+}
+
+em.imperial {
+    color: #77f;
+}
+
+em.neutral {
+    color: #fff;
+}
 
 /* =========================== HEADER FOOTER =========================== */
 
@@ -304,7 +316,7 @@ footer .footer-last {
 body > main {
     background: var(--scfl-dark-blue) url('../images/stars-cross.png') 50% / cover fixed no-repeat;
     background-blend-mode: luminosity;
-    color: #fff;
+    color: #ddd;
     box-shadow: 0 0 10px #000;
     padding-bottom: 60px;
     min-height: calc(100vh - 392px);
