@@ -19,7 +19,6 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #fff;
     font-family: 'Titillium Web', sans-serif;
 }
 
@@ -316,7 +315,7 @@ footer .footer-last {
 body > main {
     background: var(--scfl-dark-blue) url('../images/stars-cross.png') 50% / cover fixed no-repeat;
     background-blend-mode: luminosity;
-    color: #ddd;
+    color: #fff;
     box-shadow: 0 0 10px #000;
     padding-bottom: 60px;
     min-height: calc(100vh - 392px);
@@ -1040,7 +1039,15 @@ a.generic-link:hover {
     text-align-last: center;
 }
 
-/* =========================== ARCHIVE =========================== */
+#rules body > main {
+    color: #ddd;
+}
+
+#rules h1, #rules h2, #rules h3, #rules h4, #rules h5, #rules h6 {
+    color: #fff;
+}
+
+    /* =========================== ARCHIVE =========================== */
 
 table.season-one {
     text-align: center;
