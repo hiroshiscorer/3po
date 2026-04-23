@@ -62,17 +62,17 @@
 
                 <h4>Modifiers:</h4>
                 <ul class="bulleted">
-                    <li>Match Time: 20 min</li>
-                    <li>Imperial Max Hull: 1.3</li>
+                    <li>Match Time: 20 min <br><br> </li>
+                    <li><em class="imperial">Imperial</em> Max Hull: 1.3</li>
                     <li>Auxiliary Count: 1.5</li>
-                    <li>Countermeasure Cooldown Time: 1.5</li>
+                    <li>Countermeasure Cooldown Time: 1.5 <br><br></li>
                     <li><em class="rebel">New Republic</em> Flagship Hull: 1.2</li>
                     <li><em class="rebel">New Republic</em> Capital Ship Hull: 1.2</li>
                     <li><em class="rebel">New Republic</em> Capital Ship Shields: 1.2</li>
-                    <li><em class="rebel">New Republic</em> Corvette Shields: 0.6</li>
                     <li><em class="rebel">New Republic</em> Corvette Hull: 0.8</li>
-                    <li><em class="imperial">Imperial</em> Raider Shields: 0.8</li>
+                    <li><em class="rebel">New Republic</em> Corvette Shields: 0.6</li>
                     <li><em class="imperial">Imperial</em> Raider Hull: 0.6</li>
+                    <li><em class="imperial">Imperial</em> Raider Shields: 0.8</li>
                 </ul>
                 <h4>Banned Components:</h4>
                 <ul class="bulleted">
